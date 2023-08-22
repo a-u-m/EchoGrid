@@ -8,8 +8,8 @@ function createSheetExtensionIcon() {
 
   return iconContainer;
 }
-
-function initializeVoiceRecognition(port) {
+let res="";
+function initializeVoiceRecognition() {
   const recognition = new webkitSpeechRecognition();
   recognition.continuous = true;
   recognition.interimResults = true;
@@ -27,8 +27,10 @@ function initializeVoiceRecognition(port) {
 
   recognition.onresult = (event) => {
     const transcript = event.results[0][0].transcript;
-    console.log('Recognized:', transcript);
-    chrome.runtime.sendMessage({ action: 'recognizedText', text: transcript });
+  
+    res=transcript;
+    console.log('TRASCRIPT:', res);
+    
   };
 
   return recognition;
@@ -37,8 +39,8 @@ function initializeVoiceRecognition(port) {
 window.onload = () => {
   const sheetsToolbar = document.querySelector('.docs-titlebar-buttons');
   const iconContainer = createSheetExtensionIcon();
-  const backgroundPortConnect = chrome.runtime.connect({ name: 'bg-port' });
-  const recognition = initializeVoiceRecognition(backgroundPortConnect);
+  // const backgroundPortConnect = chrome.runtime.connect({ name: 'bg-port' });
+  const recognition = initializeVoiceRecognition();
   let isRecording = false;
 
   if (sheetsToolbar) {
@@ -47,6 +49,8 @@ window.onload = () => {
       if (isRecording) {
         recognition.stop();
         iconContainer.style.backgroundColor = 'red';
+        console.log('RES:', res);
+        chrome.runtime.sendMessage({ action: 'recognizedText', text: res });
       } else {
         recognition.start();
         iconContainer.style.backgroundColor = 'green';
