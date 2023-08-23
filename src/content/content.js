@@ -33,6 +33,7 @@ const initializeVoiceRecognition = () => {
   recognition.onend = () => {
     console.log(finalTranscript);
     chrome.runtime.sendMessage({ action: 'recognizedText', text: finalTranscript });
+    finalTranscript = '';
   };
 
   return recognition;

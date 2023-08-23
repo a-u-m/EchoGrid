@@ -1,36 +1,46 @@
-chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
-  const googleSheetsUrlPattern = /^https:\/\/docs\.google\.com\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/;
-  const spreadsheetIdPattern = /\/spreadsheets\/d\/([^/]+)/;
-  var cellPattern = /^[A-Za-z]+[0-9]{1,2}$/;
+const googleSheetsUrlPattern = /^https:\/\/docs\.google\.com\/spreadsheets\/d\/([a-zA-Z0-9_-]+)/;
+const spreadsheetIdPattern = /\/spreadsheets\/d\/([^/]+)/;
+const cellPattern = /^[A-Za-z]+[0-9]{1,2}$/;
+let spreadsheetId = null;
+let activeSheetName = null;
+let currentTabId = null;
 
+chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   if (changeInfo.status === 'complete' && googleSheetsUrlPattern.test(tab.url)) {
     const spreadsheetIdMatch = tab.url.match(spreadsheetIdPattern);
     if (spreadsheetIdMatch) {
-      const spreadsheetId = spreadsheetIdMatch[1];
-      const activeSheetName = await getActiveSheetName(tabId);
+      currentTabId = tabId;
+      spreadsheetId = spreadsheetIdMatch[1];
+      activeSheetName = await getActiveSheetName(tabId);
       await authenticateUser();
+    }
+  } else if (tabId === currentTabId) {
+    currentTabId = null;
+    spreadsheetId = null;
+    activeSheetName = null;
+  }
+});
 
-      chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-        if (message.action === 'recognizedText') {
-          const recognizedText = message.text;
-          console.log('Recognized Text:', recognizedText);
-          const wordArray = recognizedText.split(' ');
-          if (wordArray[0].toLowerCase() == 'delete' && cellPattern.test(wordArray[1])) {
-            clearParticularCell(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase());
-          } else if (wordArray[0].toLowerCase() == 'insert' && cellPattern.test(wordArray[1])) {
-            let val = '';
-            for (let i = 2; i < wordArray.length; i++) {
-              if (i == 2) {
-                val += wordArray[i];
-              } else {
-                val += ' ' + wordArray[i];
-              }
-            }
-            console.log(val);
-            updateCellValue(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase(), val, 'USER_ENTERED');
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (spreadsheetId && activeSheetName && currentTabId && sender.tab && sender.tab.id === currentTabId) {
+    if (message.action === 'recognizedText') {
+      const recognizedText = message.text;
+      console.log('Recognized Text:', recognizedText);
+      const wordArray = recognizedText.split(' ');
+      if (wordArray[0].toLowerCase() === 'delete' && cellPattern.test(wordArray[1])) {
+        clearParticularCell(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase());
+      } else if (wordArray[0].toLowerCase() === 'insert' && cellPattern.test(wordArray[1])) {
+        let val = '';
+        for (let i = 2; i < wordArray.length; i++) {
+          if (i === 2) {
+            val += wordArray[i];
+          } else {
+            val += ' ' + wordArray[i];
           }
         }
-      });
+        console.log(val);
+        updateCellValue(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase(), val, 'USER_ENTERED');
+      }
     }
   }
 });
