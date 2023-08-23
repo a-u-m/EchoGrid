@@ -1,4 +1,4 @@
-function createSheetExtensionIcon() {
+const createSheetExtensionIcon = () => {
   const iconContainer = document.createElement('div');
   iconContainer.id = 'sheet-extension-icon';
   iconContainer.style.width = '24px';
@@ -7,12 +7,13 @@ function createSheetExtensionIcon() {
   iconContainer.style.cursor = 'pointer';
 
   return iconContainer;
-}
-let res="";
-function initializeVoiceRecognition() {
+};
+
+const initializeVoiceRecognition = () => {
+  let finalTranscript = '';
   const recognition = new webkitSpeechRecognition();
   recognition.continuous = true;
-  recognition.interimResults = true;
+  recognition.interimResults = false;
 
   recognition.onstart = () => {
     console.log('Recognition started');
@@ -26,15 +27,16 @@ function initializeVoiceRecognition() {
   };
 
   recognition.onresult = (event) => {
-    const transcript = event.results[0][0].transcript;
-  
-    res=transcript;
-    console.log('TRASCRIPT:', res);
-    
+    finalTranscript = event.results[0][0].transcript;
+  };
+
+  recognition.onend = () => {
+    console.log(finalTranscript);
+    chrome.runtime.sendMessage({ action: 'recognizedText', text: finalTranscript });
   };
 
   return recognition;
-}
+};
 
 window.onload = () => {
   const sheetsToolbar = document.querySelector('.docs-titlebar-buttons');
@@ -49,8 +51,6 @@ window.onload = () => {
       if (isRecording) {
         recognition.stop();
         iconContainer.style.backgroundColor = 'red';
-        console.log('RES:', res);
-        chrome.runtime.sendMessage({ action: 'recognizedText', text: res });
       } else {
         recognition.start();
         iconContainer.style.backgroundColor = 'green';

@@ -18,22 +18,16 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
           if (wordArray[0].toLowerCase() == 'delete' && cellPattern.test(wordArray[1])) {
             clearParticularCell(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase());
           } else if (wordArray[0].toLowerCase() == 'insert' && cellPattern.test(wordArray[1])) {
-            let val="";
-            for(let i=2;i<wordArray.length;i++){
-              if(i==2){
-                 val+=wordArray[i];
-              }else{
-                 val+=" "+wordArray[i];
+            let val = '';
+            for (let i = 2; i < wordArray.length; i++) {
+              if (i == 2) {
+                val += wordArray[i];
+              } else {
+                val += ' ' + wordArray[i];
               }
-             
             }
             console.log(val);
-            updateCellValue(
-              spreadsheetId,
-              activeSheetName + '!' + wordArray[1].toUpperCase(),
-              val,
-              'USER_ENTERED',
-            );
+            updateCellValue(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase(), val, 'USER_ENTERED');
           }
         }
       });
@@ -76,7 +70,6 @@ const checkAuthentication = () => {
 };
 
 const authenticateUser = async () => {
-  
   const isAuthenticated = await checkAuthentication();
   if (!isAuthenticated) {
     const token = await new Promise((resolve) => {
