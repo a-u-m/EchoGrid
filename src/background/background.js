@@ -6,20 +6,36 @@ let activeSheetName = null;
 let currentTabId = null;
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
+  console.log(tabId)
   if (changeInfo.status === 'complete' && googleSheetsUrlPattern.test(tab.url)) {
     const spreadsheetIdMatch = tab.url.match(spreadsheetIdPattern);
     if (spreadsheetIdMatch) {
+      console.log(tab.url)
       currentTabId = tabId;
       spreadsheetId = spreadsheetIdMatch[1];
       activeSheetName = await getActiveSheetName(tabId);
       await authenticateUser();
     }
-  } else if (tabId === currentTabId) {
-    currentTabId = null;
-    spreadsheetId = null;
-    activeSheetName = null;
-  }
+  } 
 });
+
+chrome.tabs.onActivated.addListener(async (activeInfo) => {
+  const tabId = activeInfo.tabId;
+  chrome.tabs.get(tabId, async (tab) => {
+    console.log(tabId);
+    if (googleSheetsUrlPattern.test(tab.url)) {
+      const spreadsheetIdMatch = tab.url.match(spreadsheetIdPattern);
+      if (spreadsheetIdMatch) {
+        console.log(tab.url);
+        currentTabId = tabId;
+        spreadsheetId = spreadsheetIdMatch[1];
+        activeSheetName = await getActiveSheetName(tabId);
+        await authenticateUser();
+      }
+    }
+  });
+});
+
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (spreadsheetId && activeSheetName && currentTabId && sender.tab && sender.tab.id === currentTabId) {
