@@ -1,0 +1,663 @@
+{
+  "classes": ["CELL", "VALUE"],
+  "annotations": [
+    [
+      "Insert a1 20\r",
+      {
+        "entities": [
+          [7, 9, "CELL"],
+          [10, 12, "VALUE"]
+        ]
+      }
+    ],
+    [
+      "Insert 50 into b3\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Dhruv in c4\r",
+      {
+        "entities": [
+          [4, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Let A4 be populated with Inventory.\r",
+      {
+        "entities": [
+          [4, 6, "CELL"],
+          [25, 34, "VALUE"]
+        ]
+      }
+    ],
+    [
+      "Put Chris in D3.\r",
+      {
+        "entities": [
+          [4, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Append Budget Summary to E5.\r",
+      {
+        "entities": [
+          [7, 21, "VALUE"],
+          [25, 27, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Allow Sales Report to be entered in F1.\r",
+      {
+        "entities": [
+          [6, 18, "VALUE"],
+          [36, 38, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Have Monthly Expenses placed in C7.\r",
+      {
+        "entities": [
+          [5, 21, "VALUE"],
+          [32, 34, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Ensure that Marketing Plan is added to G6.\r",
+      {
+        "entities": [
+          [12, 26, "VALUE"],
+          [39, 41, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Let Contact List be written in B3.\r",
+      {
+        "entities": [
+          [4, 16, "VALUE"],
+          [31, 33, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Allow Meeting Minutes to be recorded in A1.\r",
+      {
+        "entities": [
+          [6, 21, "VALUE"],
+          [40, 42, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Ensure that Project Updates is typed in E4.\r",
+      {
+        "entities": [
+          [12, 27, "VALUE"],
+          [40, 42, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Input Client Data into C5.\r",
+      {
+        "entities": [
+          [6, 17, "VALUE"],
+          [23, 25, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Fill G4 with David.",
+      {
+        "entities": [
+          [5, 7, "CELL"],
+          [13, 18, "VALUE"]
+        ]
+      }
+    ],
+    [
+      "Insert 42 into D5\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Have John written in F5.\r",
+      {
+        "entities": [
+          [5, 9, "VALUE"],
+          [21, 23, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Let Presentation be inserted into D7.\r",
+      {
+        "entities": [
+          [4, 16, "VALUE"],
+          [34, 36, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Allow Meeting Notes to be written in A2.\r",
+      {
+        "entities": [
+          [6, 19, "VALUE"],
+          [37, 39, "CELL"]
+        ]
+      }
+    ],
+    [
+      "The input Marketing Campaign should be entered in B4.\r",
+      {
+        "entities": [
+          [10, 28, "VALUE"],
+          [50, 52, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Record Sales Data in C6.\r",
+      {
+        "entities": [
+          [7, 17, "VALUE"],
+          [21, 23, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Add Customer Feedback to be included in E8.\r",
+      {
+        "entities": [
+          [4, 21, "VALUE"],
+          [40, 42, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Ensure that Product Inventory is typed in G2.\r",
+      {
+        "entities": [
+          [12, 29, "VALUE"],
+          [42, 44, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Input Expense Report into D9.\r",
+      {
+        "entities": [
+          [6, 20, "VALUE"],
+          [26, 28, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Fill G1 with Task List.\r",
+      {
+        "entities": [
+          [5, 7, "CELL"],
+          [13, 22, "VALUE"]
+        ]
+      }
+    ],
+    ["", { "entities": [] }],
+    [
+      "Put Sales Report in A1\r",
+      {
+        "entities": [
+          [4, 16, "VALUE"],
+          [20, 22, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 1000 into E7\r",
+      {
+        "entities": [
+          [7, 11, "VALUE"],
+          [17, 19, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert Quarterly Budget into B2\r",
+      {
+        "entities": [
+          [7, 23, "VALUE"],
+          [29, 31, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put John in F1\r",
+      {
+        "entities": [
+          [4, 8, "VALUE"],
+          [12, 14, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 75 into A10\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 18, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Expenses in C3\r",
+      {
+        "entities": [
+          [4, 12, "VALUE"],
+          [16, 18, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 200 into G8\r",
+      {
+        "entities": [
+          [7, 10, "VALUE"],
+          [16, 18, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Alice in D6\r",
+      {
+        "entities": [
+          [4, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 30 into B4\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Inventory in E9\r",
+      {
+        "entities": [
+          [4, 13, "VALUE"],
+          [17, 19, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert Project Deadline into C7\r",
+      {
+        "entities": [
+          [7, 23, "VALUE"],
+          [29, 31, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 500 into F2\r",
+      {
+        "entities": [
+          [7, 10, "VALUE"],
+          [16, 18, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Customer Names in A3\r",
+      {
+        "entities": [
+          [4, 18, "VALUE"],
+          [22, 24, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 12 into G6\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert Meeting Notes into E4\r",
+      {
+        "entities": [
+          [7, 20, "VALUE"],
+          [26, 28, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Bob in D8\r",
+      {
+        "entities": [
+          [4, 7, "VALUE"],
+          [11, 13, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 88 into B5\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Product Prices in F5\r",
+      {
+        "entities": [
+          [4, 18, "VALUE"],
+          [22, 24, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert Task List into A8\r",
+      {
+        "entities": [
+          [7, 16, "VALUE"],
+          [22, 24, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 10 into D4\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Jane in G3\r",
+      {
+        "entities": [
+          [4, 8, "VALUE"],
+          [12, 14, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 60 into C9\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert Marketing Plan into B6\r",
+      {
+        "entities": [
+          [7, 21, "VALUE"],
+          [27, 29, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Sam in A2\r",
+      {
+        "entities": [
+          [4, 7, "VALUE"],
+          [11, 13, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 150 into F7\r",
+      {
+        "entities": [
+          [7, 10, "VALUE"],
+          [16, 18, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Expenses Summary in E6\r",
+      {
+        "entities": [
+          [4, 20, "VALUE"],
+          [24, 26, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert Client Data into C5\r",
+      {
+        "entities": [
+          [7, 18, "VALUE"],
+          [24, 26, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Insert 25 into A7\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [15, 17, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Put Chris in D3\r",
+      {
+        "entities": [
+          [4, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Enter 37 at E5\r",
+      {
+        "entities": [
+          [6, 8, "VALUE"],
+          [12, 14, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Add 500 to B7\r",
+      {
+        "entities": [
+          [4, 7, "VALUE"],
+          [11, 13, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Place Meeting Agenda within D2\r",
+      {
+        "entities": [
+          [6, 20, "VALUE"],
+          [28, 30, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Set Marketing Campaign in B4\r",
+      {
+        "entities": [
+          [4, 22, "VALUE"],
+          [26, 28, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Drop 25 into G10\r",
+      {
+        "entities": [
+          [5, 7, "VALUE"],
+          [13, 16, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Record Product Inventory in A6\r",
+      {
+        "entities": [
+          [7, 24, "VALUE"],
+          [28, 30, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Apply 100 to F3\r",
+      {
+        "entities": [
+          [6, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Deposit Customer Feedback into C8\r",
+      {
+        "entities": [
+          [8, 25, "VALUE"],
+          [31, 33, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Embed 15 at D9\r",
+      {
+        "entities": [
+          [6, 8, "VALUE"],
+          [12, 14, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Allocate Sales Data to A5\r",
+      {
+        "entities": [
+          [9, 19, "VALUE"],
+          [23, 25, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Position Task List at G1\r",
+      {
+        "entities": [
+          [9, 18, "VALUE"],
+          [22, 24, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Inject 40 at B6\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Place Project Status under F8\r",
+      {
+        "entities": [
+          [6, 20, "VALUE"],
+          [27, 29, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Place 75 to C2\r",
+      {
+        "entities": [
+          [6, 8, "VALUE"],
+          [12, 14, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Load Expense Report into E7\r",
+      {
+        "entities": [
+          [5, 19, "VALUE"],
+          [25, 27, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Assign 200 to G6\r",
+      {
+        "entities": [
+          [7, 10, "VALUE"],
+          [14, 16, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Integrate Contact List in A3\r",
+      {
+        "entities": [
+          [10, 22, "VALUE"],
+          [26, 28, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Append 60 at E4\r",
+      {
+        "entities": [
+          [7, 9, "VALUE"],
+          [13, 15, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Affix Budget Summary to C5\r",
+      {
+        "entities": [
+          [6, 20, "VALUE"],
+          [24, 26, "CELL"]
+        ]
+      }
+    ],
+    [
+      "Introduce 10 into A8",
+      {
+        "entities": [
+          [10, 12, "VALUE"],
+          [18, 20, "CELL"]
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,3 @@
+Insert a1 20
+Insert 50 into b3
+Put Dhruv in c4

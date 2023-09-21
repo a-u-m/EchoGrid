@@ -1,0 +1,73 @@
+Insert a1 20
+Insert 50 into b3
+Put Dhruv in c4
+Insert 42 into D5
+Put Sales Report in A1
+Insert 1000 into E7
+Insert Quarterly Budget into B2
+Put John in F1
+Insert 75 into A10
+Put Expenses in C3
+Insert 200 into G8
+Put Alice in D6
+Insert 30 into B4
+Put Inventory in E9
+Insert Project Deadline into C7
+Insert 500 into F2
+Put Customer Names in A3
+Insert 12 into G6
+Insert Meeting Notes into E4
+Put Bob in D8
+Insert 88 into B5
+Put Product Prices in F5
+Insert Task List into A8
+Insert 10 into D4
+Put Jane in G3
+Insert 60 into C9
+Insert Marketing Plan into B6
+Put Sam in A2
+Insert 150 into F7
+Put Expenses Summary in E6
+Insert Client Data into C5
+Insert 25 into A7
+Put Chris in D3
+Enter 37 at E5
+Add 500 to B7
+Place Meeting Agenda within D2
+Set Marketing Campaign in B4
+Drop 25 into G10
+Record Product Inventory in A6
+Apply 100 to F3
+Deposit Customer Feedback into C8
+Embed 15 at D9
+Allocate Sales Data to A5
+Position Task List at G1
+Inject 40 at B6
+Place Project Status under F8
+Place 75 to C2
+Load Expense Report into E7
+Assign 200 to G6
+Integrate Contact List in A3
+Append 60 at E4
+Affix Budget Summary to C5
+Introduce 10 into A8
+Have John written in F5.
+Let Presentation be inserted into D7.
+Allow Meeting Notes to be written in A2.
+The input Marketing Campaign should be entered in B4.
+Record Sales Data in C6.
+Add Customer Feedback to be included in E8.
+Ensure that Product Inventory is typed in G2.
+Input Expense Report into D9.
+Fill G1 with Task List.
+Let A4 be populated with Inventory.
+Put Chris in D3.
+Append Budget Summary to E5.
+Allow Sales Report to be entered in F1.
+Have Monthly Expenses placed in C7.
+Ensure that Marketing Plan is added to G6.
+Let Contact List be written in B3.
+Allow Meeting Minutes to be recorded in A1.
+Ensure that Project Updates is typed in E4.
+Input Client Data into C5.
+Fill G4 with David.

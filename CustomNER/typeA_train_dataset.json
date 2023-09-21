@@ -1,0 +1,745 @@
+{
+    "classes": ["CELL", "VALUE", "TYPE A", "TYPE B", "TYPE C"],
+    "annotations": [
+      [
+        "Set A1 to 20\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 6, "CELL"],
+            [10, 12, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Put 50 into B3\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 6, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Assign Dhruv to C4\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 12, "VALUE"],
+            [16, 18, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill D5 with 42\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 15, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Place Sales Report in cell A1\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 18, "VALUE"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Input 1000 at E7\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Insert Quarterly Budget in B2\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 23, "VALUE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Write John in F1\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Enter 75 into A10\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 8, "VALUE"],
+            [14, 17, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Record Expenses in C3\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 15, "VALUE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill G8 with 200\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 16, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Add Alice to D6\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Populate B4 with 30\r",
+        {
+          "entities": [
+            [0, 8, "TYPE A"],
+            [9, 11, "CELL"],
+            [17, 19, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Assign Inventory to E9\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 16, "VALUE"],
+            [20, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill C7 with Project Deadline\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 29, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Insert 500 at F2\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Write Customer Names in A3\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 20, "VALUE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Input 12 at G6\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 8, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Add Meeting Notes to E4\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 17, "VALUE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Put Bob in D8\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 7, "VALUE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Assign 88 to B5\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Insert Product Prices at F5\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 21, "VALUE"],
+            [25, 27, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Place Task List in A8\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 15, "VALUE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill D4 with 10\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 15, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Write Jane in G3\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Enter 60 into C9\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 8, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Set B6 to Marketing Plan\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 6, "CELL"],
+            [10, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Put Sam in A2\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 7, "VALUE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Insert 150 at F7\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Assign Expenses Summary to E6\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 23, "VALUE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill C5 with Client Data\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Put 25 in A7\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 6, "VALUE"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Add Chris to D3\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Enter 37 at E5\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 8, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Add 500 to B7\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 7, "VALUE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Place Meeting Agenda in D2\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 20, "VALUE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Input Marketing Campaign in B4\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 24, "VALUE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill G10 with -25\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 8, "CELL"],
+            [14, 17, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Record Product Inventory in A6\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 24, "VALUE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Apply 100 to F3\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Deposit Customer Feedback into C8\r",
+        {
+          "entities": [
+            [0, 7, "TYPE A"],
+            [8, 25, "VALUE"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Embed 15 at D9\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 8, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Allocate Sales Data to A5\r",
+        {
+          "entities": [
+            [0, 8, "TYPE A"],
+            [9, 19, "VALUE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Position Task List at G1\r",
+        {
+          "entities": [
+            [0, 8, "TYPE A"],
+            [9, 18, "VALUE"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Inject 40 into B6\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 9, "VALUE"],
+            [15, 17, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Place Project Status under F8\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 20, "VALUE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Put 75 in C2\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 6, "VALUE"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Load Expense Report at E7\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 19, "VALUE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Assign 200 to G6\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Integrate Contact List into A3\r",
+        {
+          "entities": [
+            [0, 9, "TYPE A"],
+            [10, 22, "VALUE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Append 60 to E4\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Affix Budget Summary at C5\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 20, "VALUE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Introduce 10 at A8\r",
+        {
+          "entities": [
+            [0, 9, "TYPE A"],
+            [10, 12, "VALUE"],
+            [16, 18, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Write John in F5\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Let Presentation be inserted into D7\r",
+        {
+          "entities": [
+            [4, 16, "VALUE"],
+            [20, 28, "TYPE A"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Allow Meeting Notes to be written in A2\r",
+        {
+          "entities": [
+            [6, 19, "VALUE"],
+            [26, 33, "TYPE A"],
+            [37, 39, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Ensure that Marketing Campaign is entered in B4\r",
+        {
+          "entities": [
+            [12, 30, "VALUE"],
+            [34, 41, "TYPE A"],
+            [45, 47, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Record Sales Data in C6\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 17, "VALUE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Add Customer Feedback to be included in E8\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 21, "VALUE"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Ensure that Product Inventory is typed in G2\r",
+        {
+          "entities": [
+            [12, 29, "VALUE"],
+            [33, 38, "TYPE A"],
+            [42, 44, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Input Expense Report into D9\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 20, "VALUE"],
+            [26, 28, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill G1 with Task List\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Let A4 be populated with Inventory\r",
+        {
+          "entities": [
+            [4, 6, "CELL"],
+            [10, 19, "TYPE A"],
+            [25, 34, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Put Chris in D3\r",
+        {
+          "entities": [
+            [0, 3, "TYPE A"],
+            [4, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Append Budget Summary at E5\r",
+        {
+          "entities": [
+            [0, 6, "TYPE A"],
+            [7, 21, "VALUE"],
+            [25, 27, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Allow Sales Report to be entered in F1\r",
+        {
+          "entities": [
+            [6, 18, "VALUE"],
+            [25, 32, "TYPE A"],
+            [36, 38, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Have Monthly Expenses placed in C7\r",
+        {
+          "entities": [
+            [5, 21, "VALUE"],
+            [22, 28, "TYPE A"],
+            [32, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Ensure that Marketing Plan is added to G6\r",
+        {
+          "entities": [
+            [12, 26, "VALUE"],
+            [30, 35, "TYPE A"],
+            [39, 41, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Let Contact List be written in B3\r",
+        {
+          "entities": [
+            [4, 16, "VALUE"],
+            [20, 27, "TYPE A"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Allow Meeting Minutes to be recorded in cell A1\r",
+        {
+          "entities": [
+            [6, 21, "VALUE"],
+            [28, 36, "TYPE A"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Ensure that Project Updates is typed in cell E4\r",
+        {
+          "entities": [
+            [12, 27, "VALUE"],
+            [31, 36, "TYPE A"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Input Client Data into C5\r",
+        {
+          "entities": [
+            [0, 5, "TYPE A"],
+            [6, 17, "VALUE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fill G4 with David\r",
+        {
+          "entities": [
+            [0, 4, "TYPE A"],
+            [5, 7, "CELL"],
+            [13, 18, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Insert the formula a+b into cell B1",
+        {
+            "entities": [
+                [0,18,"TYPE A"],
+                [20,22,"VALUE"],
+                [34,35,"CELL"]
+            ]
+        }
+      ]
+    ]
+  }

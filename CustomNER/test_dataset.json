@@ -1,0 +1,11 @@
+{"classes":["CELL","VALUE"],
+    "annotations":[["Put Project Updates in D1\r",{"entities":[[4,19,"VALUE"],
+    [23,25,"CELL"]]}],["Insert 300 into G5\r",{"entities":[[7,10,"VALUE"],
+    [16,18,"CELL"]]}],["Insert Monthly Expenses into C6\r",{"entities":[[7,23,"VALUE"],[29,31,"CELL"]]}],
+    ["Put Sarah in F4\r",{"entities":[[4,9,"VALUE"],[13,15,"CELL"]]}],
+    ["Insert 50 into A9\r",{"entities":[[7,9,"VALUE"],[15,17,"CELL"]]}],
+    ["Put Meeting Minutes in B1\r",{"entities":[[4,19,"VALUE"],[23,25,"CELL"]]}],
+    ["Insert Product Launch into E3\r",{"entities":[[7,21,"VALUE"],[27,29,"CELL"]]}],
+    ["Insert 125 into G2\r",{"entities":[[7,10,"VALUE"],[16,18,"CELL"]]}],
+    ["Put David in A4\r",{"entities":[[4,9,"VALUE"],[13,15,"CELL"]]}],
+    ["Insert 75 into C1",{"entities":[[7,9,"VALUE"],[15,17,"CELL"]]}]]}
