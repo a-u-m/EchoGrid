@@ -15,6 +15,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
       spreadsheetId = spreadsheetIdMatch[1];
       activeSheetName = await getActiveSheetName(tabId);
       await authenticateUser();
+      batchClearValues(spreadsheetId,activeSheetName+"!1:1")
     }
   } 
 });
@@ -37,29 +38,62 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 });
 
 
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
   if (spreadsheetId && activeSheetName && currentTabId && sender.tab && sender.tab.id === currentTabId) {
     if (message.action === 'recognizedText') {
       const recognizedText = message.text;
+
+      const response_entities = await extractEntitiesFromText(recognizedText)
       console.log('Recognized Text:', recognizedText);
-      const wordArray = recognizedText.split(' ');
-      if (wordArray[0].toLowerCase() === 'delete' && cellPattern.test(wordArray[1])) {
-        clearParticularCell(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase());
-      } else if (wordArray[0].toLowerCase() === 'insert' && cellPattern.test(wordArray[1])) {
-        let val = '';
-        for (let i = 2; i < wordArray.length; i++) {
-          if (i === 2) {
-            val += wordArray[i];
-          } else {
-            val += ' ' + wordArray[i];
-          }
-        }
+      console.log('model response:', response_entities);
+      // const wordArray = recognizedText.split(' ');
+      // if (wordArray[0].toLowerCase() === 'delete' && cellPattern.test(wordArray[1])) {
+      //   clearParticularCell(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase());
+      // } else if (wordArray[0].toLowerCase() === 'insert' && cellPattern.test(wordArray[1])) {
+      //   let val = '';
+      //   for (let i = 2; i < wordArray.length; i++) {
+      //     if (i === 2) {
+      //       val += wordArray[i];
+      //     } else {
+      //       val += ' ' + wordArray[i];
+      //     }
+      //   }
+      if (response_entities.commands[0].toLowerCase() === 'type b' && cellPattern.test(response_entities.cells[0])) {
+        updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(),'', 'USER_ENTERED');
+      } else if (response_entities.commands[0].toLowerCase() === 'type a' && cellPattern.test(response_entities.cells[0])) {
+        let val = response_entities.values[0]
         console.log(val);
-        updateCellValue(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase(), val, 'USER_ENTERED');
+        updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(), val, 'USER_ENTERED');
       }
     }
   }
 });
+
+const extractEntitiesFromText = async(text) => {
+  try {
+    const response = await fetch('http://127.0.0.1:5000/predict', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ text }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data)
+    const values = data.values;
+    const commands = data.type_labels;
+    const cells = data.cells;
+
+    return {commands : commands,cells:cells,values:values}
+  } catch (error) {
+    console.error('Fetch error:', error);
+  }
+}
 
 const getActiveSheetName = (tabId) => {
   return new Promise(async (resolve, reject) => {
@@ -122,28 +156,6 @@ const unauthenticateUser = () => {
   });
 };
 
-const fetchDataFromGoogleSheet = async (spreadsheetId, range) => {
-  try {
-    const token = await checkAuthentication();
-
-    const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    if (!response.ok) {
-      throw new Error('Failed to fetch data from Google Sheets.');
-    }
-
-    const data = await response.json();
-    console.log(data);
-    return data;
-  } catch (error) {
-    console.error('API request error:', error);
-    throw error;
-  }
-};
-
 const updateCellValue = async (spreadsheetId, range, newValue, valueInputOption) => {
   try {
     const token = await checkAuthentication();
@@ -174,17 +186,17 @@ const updateCellValue = async (spreadsheetId, range, newValue, valueInputOption)
   }
 };
 
-const clearParticularCell = async (spreadsheetId, range) => {
+const batchClearValues = async (spreadsheetId, ranges) => {
   try {
     const token = await checkAuthentication();
-    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(
-      spreadsheetId,
-    )}/values/${encodeURIComponent(range)}?valueInputOption=RAW`;
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values:batchClear`;
+
     const requestBody = {
-      values: [['']],
+      ranges: ranges,
     };
+
     const response = await fetch(apiUrl, {
-      method: 'PUT',
+      method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -192,12 +204,13 @@ const clearParticularCell = async (spreadsheetId, range) => {
       body: JSON.stringify(requestBody),
     });
 
-    const responseData = await response.json();
-
-    if (!response.ok) {
-      throw new Error(`Failed to update cell value: ${responseData.error.message}`);
+    if (response.ok) {
+      console.log('Batch clear operation completed successfully.');
+    } else {
+      const responseData = await response.json();
+      console.error(`Failed to perform batch clear operation: ${responseData.error.message}`);
     }
   } catch (error) {
-    console.error('Error updating cell value:', error);
+    console.error('Error performing batch clear operation:', error);
   }
 };

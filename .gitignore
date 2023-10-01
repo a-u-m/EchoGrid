@@ -1,4 +1,6 @@
 .DS_store
+
+model/
 # Logs
 logs
 *.log
@@ -7,6 +9,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+
+myenv/
 
 # manifest.json
 manifest.json
