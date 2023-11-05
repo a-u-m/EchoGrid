@@ -328,3 +328,54 @@ const deleteRow = async (spreadsheetId, rowIndex) => {
     console.error('Error deleting row:', error);
   }
 };
+
+
+const find_replace = async (spreadsheetId, find, replace) => {
+  try {
+    console.log('Find : ' + find + ' Replace : ' + replace);
+    const token = await checkAuthentication();
+
+    const sheetID = parseInt(spreadsheetId);
+    console.log('spreadsheetId :' + spreadsheetId);
+    console.log('sheetID :' + sheetID);
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    const requests = [
+      {
+        findReplace: {
+          find: String(find),
+          replacement: String(replace),
+
+          matchCase: false,
+          matchEntireCell: false,
+
+          range: {},
+        },
+      },
+    ];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to replace values: ${responseData.error.message}`);
+    }
+
+    console.log(`Replaced the values`);
+  } catch (error) {
+    console.error('Error replacing values', error);
+  }
+};
