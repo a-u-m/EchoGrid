@@ -27,7 +27,8 @@
     "rimraf": "^5.0.1",
     "tailwindcss": "^3.3.3",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "css-loader": "^6.8.1"

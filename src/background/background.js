@@ -4,6 +4,7 @@ const cellPattern = /^[A-Za-z]+[0-9]{1,2}$/;
 let spreadsheetId = null;
 let activeSheetName = null;
 let currentTabId = null;
+const columnPattern = /^[A-Za-z]{1,2}$/;
 
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   console.log(tabId)
@@ -212,5 +213,118 @@ const batchClearValues = async (spreadsheetId, ranges) => {
     }
   } catch (error) {
     console.error('Error performing batch clear operation:', error);
+  }
+};
+
+
+
+
+
+const deleteColumn = async (spreadsheetId, columnIndex) => {
+  try {
+    const token = await checkAuthentication();
+
+    console.log('columnIndex :' + columnIndex);
+
+    const sheetID = parseInt(spreadsheetId);
+    console.log('spreadsheetId :' + spreadsheetId);
+    console.log('sheetID :' + sheetID);
+    const startIndex = parseInt(columnIndex) - 1;
+    const endIndex = parseInt(columnIndex);
+    console.log('endIndex :' + endIndex);
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    const requests = [
+      {
+        deleteDimension: {
+          range: {
+            sheetId: 0,
+            dimension: 'COLUMNS',
+            startIndex: startIndex,
+            endIndex: endIndex,
+          },
+        },
+      },
+    ];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to delete column: ${responseData.error.message}`);
+    }
+
+    console.log(`Deleted column at index ${columnIndex}`);
+  } catch (error) {
+    console.error('Error deleting column:', error);
+  }
+};
+
+
+
+
+const deleteRow = async (spreadsheetId, rowIndex) => {
+  try {
+    const token = await checkAuthentication();
+
+    console.log('rowIndex :' + rowIndex);
+
+    const sheetID = parseInt(spreadsheetId);
+    console.log('spreadsheetId :' + spreadsheetId);
+    console.log('sheetID :' + sheetID);
+    const startIndex = parseInt(rowIndex) - 1;
+    const endIndex = parseInt(rowIndex);
+    console.log('endIndex :' + endIndex);
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    const requests = [
+      {
+        deleteDimension: {
+          range: {
+            sheetId: 0,
+            dimension: 'ROWS',
+            startIndex: startIndex,
+            endIndex: endIndex,
+          },
+        },
+      },
+    ];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to delete row: ${responseData.error.message}`);
+    }
+
+    console.log(`Deleted row at index ${rowIndex}`);
+  } catch (error) {
+    console.error('Error deleting row:', error);
   }
 };
