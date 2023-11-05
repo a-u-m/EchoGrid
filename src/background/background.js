@@ -239,7 +239,7 @@ const deleteColumn = async (spreadsheetId, columnIndex) => {
       {
         deleteDimension: {
           range: {
-            sheetId: 0,
+            // sheetId: 0,
             dimension: 'COLUMNS',
             startIndex: startIndex,
             endIndex: endIndex,
@@ -295,7 +295,7 @@ const deleteRow = async (spreadsheetId, rowIndex) => {
       {
         deleteDimension: {
           range: {
-            sheetId: 0,
+            // sheetId: 0,
             dimension: 'ROWS',
             startIndex: startIndex,
             endIndex: endIndex,
