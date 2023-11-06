@@ -71,3 +71,106 @@ Allow Meeting Minutes to be recorded in A1
 Ensure that Project Updates is typed in E4
 Input Client Data into C5
 Fill G4 with David
+
+Clear the data in cell A2.
+Clear cell B3.
+Remove the value from cell C4.
+Erase the contents in cell D5.
+Clear cell A1 of any information.
+Wipe out the data in cell F1.
+Remove the value from cell G8.
+Delete the contents in cell B3.
+Erase the data in cell E7.
+Clear cell D6 of any information.
+Remove the value from cell C3.
+Delete the contents in cell A10.
+Erase the data in cell B4.
+Clear cell C7 of any information.
+Remove the value from cell F2.
+Delete the contents in cell A3.
+Erase the data in cell G6.
+Clear cell E4 of any information.
+Remove the value from cell D8.
+Delete the contents in cell B5.
+Erase the data in cell F5.
+Clear cell A8 of any information.
+Remove the value from cell F3.
+Delete the contents in cell C8.
+Erase the data in cell D9.
+Clear cell A5 of any information.
+Remove the value from cell G1.
+Delete the contents in cell B6.
+Erase the data in cell F8.
+Clear cell C2 of any information.
+Remove the value from cell E7.
+Delete the contents in cell G6.
+Erase the data in cell A3.
+Clear cell A1 of any information.
+Remove the value from cell C7.
+Delete the contents in cell G4.
+Erase the data in cell D5.
+Clear cell B2 of any information.
+Remove the contents in cell D7.
+Clear cell A2 of any information.
+Remove the value from cell F4.
+Delete the contents in cell B1.
+Erase the data in cell E6.
+Clear cell C5 of any information.
+Remove the value from cell F10.
+Delete the contents in cell A6.
+Erase the data in cell E5.
+Clear cell C6 of any information.
+Remove the value from cell G2.
+Delete the contents in cell B9.
+Erase the data in cell A4.
+
+Replace Dhruv with Prathamesh.
+Swap chocolate with ice cream.
+Substitute banana for apple.
+Change bike to car.
+Exchange rose for sunflower.
+Replace blue with red.
+Swap Wednesday with Monday.
+Substitute sushi for pizza.
+Change pencil to pen.
+Exchange basketball for football.
+Replace winter with summer.
+Swap strawberry with mango.
+Substitute magazine for book.
+Change mountains to beach.
+Exchange text message for email.
+Replace student with teacher.
+Swap tea with coffee.
+Substitute play for movie.
+Change cat to dog.
+Exchange sandals for shoes.
+Replace river with lake.
+Swap tablet with computer.
+Substitute motel for hotel.
+Change piano to guitar.
+Exchange apple for orange.
+Replace soda with juice.
+Swap sweater with jacket.
+Substitute soccer for football.
+Change conference to meeting.
+Exchange bus for train.
+Replace appetizer with dessert.
+Swap fish with chicken.
+Substitute coworker for colleague.
+Change nurse to doctor.
+Exchange sunny for cloudy.
+Replace raincoat with umbrella.
+Swap bookstore with library.
+Substitute park for gym.
+Change concert hall to movie theater.
+Exchange skateboard for bike.
+Replace hot dog with hamburger.
+Swap vacation with holiday.
+Substitute guardian for parent.
+Change hat to sunglasses.
+Exchange salad for soup.
+Replace tablet with phone.
+Swap company with business.
+Substitute podcast for music.
+Change magazine to newspaper.
+Exchange cafe for restaurant.

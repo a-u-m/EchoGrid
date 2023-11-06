@@ -1,0 +1,3142 @@
+{
+    "classes": [
+      "CELL",
+      "VALUE",
+      "INSERT",
+      "DELETE",
+      "REPLACE",
+      "COPY",
+      "PASTE",
+      "COLUMN",
+      "ROW",
+      "MERGE",
+      "ITALIC",
+      "BOLD"
+    ],
+    "annotations": [
+      [
+        "set A1 to 20\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 6, "CELL"],
+            [10, 12, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "put 50 into B3\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 6, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "assign Dhruv to C4\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 12, "VALUE"],
+            [16, 18, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill D5 with 42\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 15, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "place Sales Report in A1\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 18, "VALUE"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "input 1000 at E7\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "insert Quarterly Budget in B2\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 23, "VALUE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "write John in F1\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "enter 75 into A10\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 8, "VALUE"],
+            [14, 17, "CELL"]
+          ]
+        }
+      ],
+      [
+        "record Expenses in C3\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 15, "VALUE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill G8 with 200\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 16, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "add Alice to D6\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "populate B4 with 30\r",
+        {
+          "entities": [
+            [0, 8, "INSERT"],
+            [9, 11, "CELL"],
+            [17, 19, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "assign Inventory to E9\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 16, "VALUE"],
+            [20, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill C7 with Project Deadline\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 29, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "insert 500 at F2\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "write Customer Names in A3\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 20, "VALUE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "input 12 at G6\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 8, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "add Meeting Notes to E4\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 17, "VALUE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "put Bob in D8\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 7, "VALUE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "assign 88 to B5\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "insert Product Prices at F5\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 21, "VALUE"],
+            [25, 27, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place Task List in A8\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 15, "VALUE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill D4 with 10\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 15, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "write Jane in G3\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "enter 60 into C9\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 8, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "set B6 to Marketing Plan\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 6, "CELL"],
+            [10, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "put Sam in A2\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 7, "VALUE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "insert 150 at F7\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "assign Expenses Summary to E6\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 23, "VALUE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill C5 with Client Data\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "put 25 in A7\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 6, "VALUE"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "add Chris to D3\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "enter 37 at E5\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 8, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "add 500 to B7\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 7, "VALUE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place Meeting Agenda in D2\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 20, "VALUE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "input Marketing Campaign in B4\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 24, "VALUE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill G10 with -25\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 8, "CELL"],
+            [14, 17, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "record Product Inventory in A6\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 24, "VALUE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "apply 100 to F3\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "deposit Customer Feedback into C8\r",
+        {
+          "entities": [
+            [0, 7, "INSERT"],
+            [8, 25, "VALUE"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "embed 15 at D9\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 8, "VALUE"],
+            [12, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "allocate Sales Data to A5\r",
+        {
+          "entities": [
+            [0, 8, "INSERT"],
+            [9, 19, "VALUE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "position Task List at G1\r",
+        {
+          "entities": [
+            [0, 8, "INSERT"],
+            [9, 18, "VALUE"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Inject 40 into B6\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 9, "VALUE"],
+            [15, 17, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place Project Status under F8\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 20, "VALUE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "put 75 in C2\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 6, "VALUE"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "load Expense Report at E7\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 19, "VALUE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "assign 200 to G6\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "integrate Contact List into A3\r",
+        {
+          "entities": [
+            [0, 9, "INSERT"],
+            [10, 22, "VALUE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "append 60 to E4\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "affix Budget Summary at C5\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 20, "VALUE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "introduce 10 at A8\r",
+        {
+          "entities": [
+            [0, 9, "INSERT"],
+            [10, 12, "VALUE"],
+            [16, 18, "CELL"]
+          ]
+        }
+      ],
+      [
+        "write John in F5\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 10, "VALUE"],
+            [14, 16, "CELL"]
+          ]
+        }
+      ],
+      [
+        "let Presentation be inserted into D7\r",
+        {
+          "entities": [
+            [4, 16, "VALUE"],
+            [20, 28, "INSERT"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "allow Meeting Notes to be written in A2\r",
+        {
+          "entities": [
+            [6, 19, "VALUE"],
+            [26, 33, "INSERT"],
+            [37, 39, "CELL"]
+          ]
+        }
+      ],
+      [
+        "ensure that Marketing Campaign is entered in B4\r",
+        {
+          "entities": [
+            [12, 30, "VALUE"],
+            [34, 41, "INSERT"],
+            [45, 47, "CELL"]
+          ]
+        }
+      ],
+      [
+        "record Sales Data in C6\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 17, "VALUE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "add Customer Feedback to be included in E8\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 21, "VALUE"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "ensure that Product Inventory is typed in G2\r",
+        {
+          "entities": [
+            [12, 29, "VALUE"],
+            [33, 38, "INSERT"],
+            [42, 44, "CELL"]
+          ]
+        }
+      ],
+      [
+        "input Expense Report into D9\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 20, "VALUE"],
+            [26, 28, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill G1 with Task List\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "let A4 be populated with Inventory\r",
+        {
+          "entities": [
+            [4, 6, "CELL"],
+            [10, 19, "INSERT"],
+            [25, 34, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "put Chris in D3\r",
+        {
+          "entities": [
+            [0, 3, "INSERT"],
+            [4, 9, "VALUE"],
+            [13, 15, "CELL"]
+          ]
+        }
+      ],
+      [
+        "append Budget Summary at E5\r",
+        {
+          "entities": [
+            [0, 6, "INSERT"],
+            [7, 21, "VALUE"],
+            [25, 27, "CELL"]
+          ]
+        }
+      ],
+      [
+        "allow Sales Report to be entered in F1\r",
+        {
+          "entities": [
+            [6, 18, "VALUE"],
+            [25, 32, "INSERT"],
+            [36, 38, "CELL"]
+          ]
+        }
+      ],
+      [
+        "have Monthly Expenses placed in C7\r",
+        {
+          "entities": [
+            [5, 21, "VALUE"],
+            [22, 28, "INSERT"],
+            [32, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "ensure that Marketing Plan is added to G6\r",
+        {
+          "entities": [
+            [12, 26, "VALUE"],
+            [30, 35, "INSERT"],
+            [39, 41, "CELL"]
+          ]
+        }
+      ],
+      [
+        "let Contact List be written in B3\r",
+        {
+          "entities": [
+            [4, 16, "VALUE"],
+            [20, 27, "INSERT"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "allow Meeting Minutes to be recorded in A1\r",
+        {
+          "entities": [
+            [6, 21, "VALUE"],
+            [28, 36, "INSERT"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "ensure that Project Updates is typed in E4\r",
+        {
+          "entities": [
+            [12, 27, "VALUE"],
+            [31, 36, "INSERT"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "input Client Data into C5\r",
+        {
+          "entities": [
+            [0, 5, "INSERT"],
+            [6, 17, "VALUE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "fill G4 with David\r",
+        {
+          "entities": [
+            [0, 4, "INSERT"],
+            [5, 7, "CELL"],
+            [13, 18, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "delete the content of A1.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear cell B3.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [11, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "remove value from cell C4.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [23, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "erase the value from D5.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "erase the value of D5.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "delete Sales Report from cell A1.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [30, 32, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear the input in E7.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear the input in M7.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear the input from A6.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "remove Quarterly Budget from cell B2.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "erase name from cell D6.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "delete the value in cell B7.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [25, 27, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear the data of G8.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [18, 20, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear the formula in B4.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [21, 23, "CELL"]
+          ]
+        }
+      ],
+      [
+        "remove the text in cell C5.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "erase the calculation from D6.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "clear the value in cell E9.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "remove the contents in cell F5.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "erase the values in G1.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [20, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "replace Dhruv with Prathamesh.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 13, "VALUE"],
+            [19, 29, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap chocolate with ice cream.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 14, "VALUE"],
+            [20, 29, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute banana for apple.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 17, "VALUE"],
+            [22, 27, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change bike to car.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 11, "VALUE"],
+            [15, 18, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange rose for sunflower.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 13, "VALUE"],
+            [18, 27, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace blue with red.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 12, "VALUE"],
+            [18, 21, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap Wednesday with Monday.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 14, "VALUE"],
+            [20, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute sushi for pizza.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 16, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change pencil to pen.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 13, "VALUE"],
+            [17, 20, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange basketball for football.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 19, "VALUE"],
+            [24, 32, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace winter with summer.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 14, "VALUE"],
+            [20, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap strawberry with mango.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 15, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute magazine for book.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 19, "VALUE"],
+            [24, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change mountains to beach.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 16, "VALUE"],
+            [20, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange text message for email.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 21, "VALUE"],
+            [26, 31, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace student with teacher.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 15, "VALUE"],
+            [21, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap tea with coffee.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 8, "VALUE"],
+            [14, 20, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute play for movie.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 15, "VALUE"],
+            [20, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change cat to dog.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 10, "VALUE"],
+            [14, 17, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange sandals for shoes.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 16, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace river with lake.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 13, "VALUE"],
+            [19, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap tablet with computer.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 11, "VALUE"],
+            [17, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute motel for hotel.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 16, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change piano to guitar.",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 12, "VALUE"],
+            [16, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace soda with juice.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 12, "VALUE"],
+            [18, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap sweater with jacket.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 12, "VALUE"],
+            [18, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute soccer for football.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 17, "VALUE"],
+            [22, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change conference to meeting.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 17, "VALUE"],
+            [21, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange bus for train.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 12, "VALUE"],
+            [17, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace appetizer with dessert.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 17, "VALUE"],
+            [23, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap fish with chicken.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 9, "VALUE"],
+            [15, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute coworker for colleague.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 19, "VALUE"],
+            [24, 33, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change nurse to doctor.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 12, "VALUE"],
+            [16, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange sunny for cloudy.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 14, "VALUE"],
+            [19, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace raincoat with umbrella.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 16, "VALUE"],
+            [22, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap bookstore with library.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 14, "VALUE"],
+            [20, 27, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute park for gym.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 15, "VALUE"],
+            [20, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change concert hall to movie theater.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 19, "VALUE"],
+            [23, 36, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange skateboard for bike.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 19, "VALUE"],
+            [24, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace hot dog with hamburger.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 15, "VALUE"],
+            [21, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap vacation with holiday.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 13, "VALUE"],
+            [19, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute guardian for parent.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 19, "VALUE"],
+            [24, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change hat to sunglasses.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 10, "VALUE"],
+            [14, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange salad for soup.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 14, "VALUE"],
+            [19, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "replace tablet with phone.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 14, "VALUE"],
+            [20, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "swap company with business.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 12, "VALUE"],
+            [18, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "substitute podcast for music.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 18, "VALUE"],
+            [23, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "change magazine to newspaper.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 15, "VALUE"],
+            [19, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "exchange cafe for restaurant.",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 13, "VALUE"],
+            [18, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "retrieve the content from cell A1.\r",
+        {
+          "entities": [
+            [0, 8, "COPY"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place it into cell B2.\r",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "retrieve the content from cell A1.\r",
+        {
+          "entities": [
+            [0, 8, "COPY"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place it into cell B2.\r",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "retrieve the content from cell A1.\r",
+        {
+          "entities": [
+            [0, 8, "COPY"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place it into cell B2.\r",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "duplicate the data in cell C4.\r",
+        {
+          "entities": [
+            [0, 9, "COPY"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "transfer it to cell D5.\r",
+        {
+          "entities": [
+            [0, 8, "PASTE"],
+            [20, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "duplicate the data in cell C4.\r",
+        {
+          "entities": [
+            [0, 9, "COPY"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "transfer it to cell D5.\r",
+        {
+          "entities": [
+            [0, 8, "PASTE"],
+            [20, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "duplicate the data in cell C4.\r",
+        {
+          "entities": [
+            [0, 9, "COPY"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "transfer it to cell D5.\r",
+        {
+          "entities": [
+            [0, 8, "PASTE"],
+            [20, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "copy the values from cell E7\r",
+        {
+          "entities": [
+            [0, 4, "COPY"],
+            [26, 28, "CELL"]
+          ]
+        }
+      ],
+      [
+        "paste them in cell F8.\r",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "copy the data from cell O7.\r",
+        {
+          "entities": [
+            [0, 4, "COPY"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "deposit it in cell P8.\r",
+        {
+          "entities": [
+            [0, 7, "PASTE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "copy the data from cell O7.\r",
+        {
+          "entities": [
+            [0, 4, "COPY"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "deposit it in cell P8.\r",
+        {
+          "entities": [
+            [0, 7, "PASTE"],
+            [19, 21, "CELL"]
+          ]
+        }
+      ],
+      [
+        "copy the values from cell W15 \r",
+        {
+          "entities": [
+            [0, 4, "COPY"],
+            [26, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "paste them into cell X16.\r",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [21, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "retrieve the content from cell Y17 \r",
+        {
+          "entities": [
+            [0, 8, "COPY"],
+            [31, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place it into cell Z18.",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "retrieve the content from cell Y17 \r",
+        {
+          "entities": [
+            [0, 8, "COPY"],
+            [31, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place it into cell Z18.",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "retrieve the content from cell T17 \r",
+        {
+          "entities": [
+            [0, 8, "COPY"],
+            [31, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "place it into cell Q58.",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "copy the information from cell A25\r",
+        {
+          "entities": [
+            [0, 4, "COPY"],
+            [31, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "deposit it in cell H26.\r",
+        {
+          "entities": [
+            [0, 7, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "copy the information from cell Y25\r",
+        {
+          "entities": [
+            [0, 4, "COPY"],
+            [31, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "deposit it in cell V26.\r",
+        {
+          "entities": [
+            [0, 7, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "extract the content from cell M59\r",
+        {
+          "entities": [
+            [0, 7, "COPY"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "move it to cell L36.\r",
+        {
+          "entities": [
+            [0, 4, "PASTE"],
+            [16, 19, "CELL"]
+          ]
+        }
+      ],
+      [
+        "extract the content from cell R29\r",
+        {
+          "entities": [
+            [0, 7, "COPY"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "move it to cell P30.\r",
+        {
+          "entities": [
+            [0, 4, "PASTE"],
+            [16, 19, "CELL"]
+          ]
+        }
+      ],
+      [
+        "extract the content from cell I96\r",
+        {
+          "entities": [
+            [0, 7, "COPY"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "move it to cell T35.\r",
+        {
+          "entities": [
+            [0, 4, "PASTE"],
+            [16, 19, "CELL"]
+          ]
+        }
+      ],
+      [
+        "duplicate the data in cell M31\r",
+        {
+          "entities": [
+            [0, 9, "COPY"],
+            [27, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "paste it into cell N32.",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "duplicate the data in cell L31\r",
+        {
+          "entities": [
+            [0, 9, "COPY"],
+            [27, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "paste it into cell U32.",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "duplicate the data in cell Q36\r",
+        {
+          "entities": [
+            [0, 9, "COPY"],
+            [27, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "paste it into cell A25.",
+        {
+          "entities": [
+            [0, 5, "PASTE"],
+            [19, 22, "CELL"]
+          ]
+        }
+      ],
+      [
+        "remove column D.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [14, 15, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "eliminate column A.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [17, 18, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "erase column U.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [13, 14, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "omit column M.\r",
+        {
+          "entities": [
+            [0, 4, "DELETE"],
+            [12, 13, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "get rid of the E column.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [15, 16, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "get rid of the E column.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [15, 16, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "exclude column M.\r",
+        {
+          "entities": [
+            [0, 7, "DELETE"],
+            [15, 16, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "drop column R from the spreadsheet.\r",
+        {
+          "entities": [
+            [0, 4, "DELETE"],
+            [12, 13, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "drop column R from the spreadsheet.\r",
+        {
+          "entities": [
+            [0, 4, "DELETE"],
+            [12, 13, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "cut out column M.\r",
+        {
+          "entities": [
+            [0, 3, "DELETE"],
+            [15, 16, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "strip away column Y.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [18, 19, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "strip away the column Y from the spreadsheet.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [22, 23, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "exclude the column L from the table.\r",
+        {
+          "entities": [
+            [0, 7, "DELETE"],
+            [19, 20, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "eradicate column Q.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [17, 18, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "eradicate column Q.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [17, 18, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "take out column C.\r",
+        {
+          "entities": [
+            [0, 8, "DELETE"],
+            [16, 17, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "scrub column Z from the record.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [13, 14, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "leave out column G.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [17, 18, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "leave out column G.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [17, 18, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "purge column B.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [13, 14, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "purge column B.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [13, 14, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "wipe out column I.\r",
+        {
+          "entities": [
+            [0, 8, "DELETE"],
+            [16, 17, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "vanish column V from the spreadsheet.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [14, 15, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "vanish column V.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [14, 15, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "clear out column K.",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [17, 18, "COLUMN"]
+          ]
+        }
+      ],
+      [
+        "remove row 3.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [11, 12, "ROW"]
+          ]
+        }
+      ],
+      [
+        "eliminate the data in row 7.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [26, 27, "ROW"]
+          ]
+        }
+      ],
+      [
+        "wipe out the content in row 12.\r",
+        {
+          "entities": [
+            [0, 8, "DELETE"],
+            [28, 30, "ROW"]
+          ]
+        }
+      ],
+      [
+        "get rid of the entry in row 15.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [28, 30, "ROW"]
+          ]
+        }
+      ],
+      [
+        "erase row 22.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [10, 12, "ROW"]
+          ]
+        }
+      ],
+      [
+        "obliterate row 25.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [15, 17, "ROW"]
+          ]
+        }
+      ],
+      [
+        "clear all information in row 31.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [29, 31, "ROW"]
+          ]
+        }
+      ],
+      [
+        "delete row 40.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [11, 13, "ROW"]
+          ]
+        }
+      ],
+      [
+        "purge the records in row 44.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [25, 27, "ROW"]
+          ]
+        }
+      ],
+      [
+        "eradicate row 51.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [14, 16, "ROW"]
+          ]
+        }
+      ],
+      [
+        "remove all data in row 60.\r",
+        {
+          "entities": [
+            [0, 6, "DELETE"],
+            [23, 25, "ROW"]
+          ]
+        }
+      ],
+      [
+        "Annihilate the content in row 65.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [30, 32, "ROW"]
+          ]
+        }
+      ],
+      [
+        "wipe row 73 clean of its contents.\r",
+        {
+          "entities": [
+            [0, 4, "DELETE"],
+            [9, 11, "ROW"]
+          ]
+        }
+      ],
+      [
+        "Empty row 80 of any content.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [10, 12, "ROW"]
+          ]
+        }
+      ],
+      [
+        "clear row 88 entirely.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [10, 12, "ROW"]
+          ]
+        }
+      ],
+      [
+        "eliminate row 95 from the dataset.\r",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [14, 16, "ROW"]
+          ]
+        }
+      ],
+      [
+        "erase all information from row 99.\r",
+        {
+          "entities": [
+            [0, 5, "DELETE"],
+            [31, 33, "ROW"]
+          ]
+        }
+      ],
+      [
+        "Obliterate the records in row 102.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [30, 33, "ROW"]
+          ]
+        }
+      ],
+      [
+        "get rid of row 110.\r",
+        {
+          "entities": [
+            [0, 10, "DELETE"],
+            [15, 18, "ROW"]
+          ]
+        }
+      ],
+      [
+        "eradicate the contents in row 115.",
+        {
+          "entities": [
+            [0, 9, "DELETE"],
+            [30, 33, "ROW"]
+          ]
+        }
+      ],
+      [
+        "combine the cells spanning from B3 to E4.\r",
+        {
+          "entities": [
+            [0, 7, "MERGE"],
+            [32, 34, "CELL"],
+            [38, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the range of cells F7 to I8.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [25, 27, "CELL"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Unify the content in cells A1 through C2.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [27, 29, "CELL"],
+            [38, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "create a merged cell from G3 to J4.\r",
+        {
+          "entities": [
+            [9, 15, "MERGE"],
+            [26, 28, "CELL"],
+            [32, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "join the cells in the range K5 to L6.\r",
+        {
+          "entities": [
+            [0, 4, "MERGE"],
+            [28, 30, "CELL"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "combine the contents of cells M9 through N10.\r",
+        {
+          "entities": [
+            [0, 7, "MERGE"],
+            [30, 32, "CELL"],
+            [41, 44, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the specified cell range, O11 to Q12.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [32, 35, "CELL"],
+            [39, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "unite the cells from S13 to V14.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [21, 24, "CELL"],
+            [28, 31, "CELL"]
+          ]
+        }
+      ],
+      [
+        "consolidate the cells in the range X15 Y16.\r",
+        {
+          "entities": [
+            [0, 11, "MERGE"],
+            [35, 38, "CELL"],
+            [39, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "form a single cell by merging Z17 to A18.\r",
+        {
+          "entities": [
+            [22, 29, "MERGE"],
+            [30, 33, "CELL"],
+            [37, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "combine the cells spanning from C3 to F4.\r",
+        {
+          "entities": [
+            [0, 7, "MERGE"],
+            [32, 34, "CELL"],
+            [38, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the range of cells G7 to J8.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [25, 27, "CELL"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Unify the content in cells B1 through D2.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [27, 29, "CELL"],
+            [38, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "create a merged cell from E3 to H4.\r",
+        {
+          "entities": [
+            [9, 15, "MERGE"],
+            [26, 28, "CELL"],
+            [32, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "join the cells in the range I5 to K6.\r",
+        {
+          "entities": [
+            [0, 4, "MERGE"],
+            [28, 30, "CELL"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "combine the contents of cells L9 through M10.\r",
+        {
+          "entities": [
+            [0, 7, "MERGE"],
+            [30, 32, "CELL"],
+            [41, 44, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the specified cell range, N11 to P12.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [32, 35, "CELL"],
+            [39, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "unite the cells from Q13 to T14.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [21, 24, "CELL"],
+            [28, 31, "CELL"]
+          ]
+        }
+      ],
+      [
+        "consolidate the cells in the range U15 to W16.\r",
+        {
+          "entities": [
+            [0, 11, "MERGE"],
+            [35, 38, "CELL"],
+            [42, 45, "CELL"]
+          ]
+        }
+      ],
+      [
+        "form a single cell by merging X17 to Z18.",
+        {
+          "entities": [
+            [22, 29, "MERGE"],
+            [30, 33, "CELL"],
+            [37, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the cells from B4 to C8 and then merge them again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [21, 23, "CELL"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "combine and merge the data in cells D3 to E7.\r",
+        {
+          "entities": [
+            [12, 17, "MERGE"],
+            [36, 38, "CELL"],
+            [42, 44, "CELL"]
+          ]
+        }
+      ],
+      [
+        "join, unify, and then merge the values in cells F2 through G6.\r",
+        {
+          "entities": [
+            [22, 27, "MERGE"],
+            [48, 50, "CELL"],
+            [59, 61, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and blend the content in cells H4 to I8.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [37, 39, "CELL"],
+            [43, 45, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and group the cells from J1 to K5.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [31, 33, "CELL"],
+            [37, 39, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and consolidate the data in L2 through M6.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [34, 36, "CELL"],
+            [45, 47, "CELL"]
+          ]
+        }
+      ],
+      [
+        "Fuse and merge the values in N3 to O7.\r",
+        {
+          "entities": [
+            [9, 14, "MERGE"],
+            [29, 31, "CELL"],
+            [35, 37, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge, unite, and blend the content in P2 through Q6.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [39, 41, "CELL"],
+            [50, 52, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and connect the cells from R1 to S5.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [33, 35, "CELL"],
+            [39, 41, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the data in T3 through U7, then merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [18, 20, "CELL"],
+            [29, 31, "CELL"]
+          ]
+        }
+      ],
+      [
+        "unite, merge, and combine the values in V4 to W8.\r",
+        {
+          "entities": [
+            [7, 12, "MERGE"],
+            [40, 42, "CELL"],
+            [46, 48, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and connect the cells from X2 to Y6, then merge one more time.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [33, 35, "CELL"],
+            [39, 41, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the cells from Z3 through AA7, and then merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [21, 23, "CELL"],
+            [32, 35, "CELL"]
+          ]
+        }
+      ],
+      [
+        "join, merge, and unify the content in AB4 to AC8.\r",
+        {
+          "entities": [
+            [6, 11, "MERGE"],
+            [38, 41, "CELL"],
+            [45, 48, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and consolidate the cells from AD1 to AE5, then merge.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [37, 40, "CELL"],
+            [44, 47, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and blend the data in AF3 through AG7 and merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [28, 31, "CELL"],
+            [40, 43, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the values in AH2 to AI6 and then merge once more.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [20, 23, "CELL"],
+            [27, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and fuse the content in AJ4 to AK8, and then merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [30, 33, "CELL"],
+            [37, 40, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and connect the cells from AL1 to AM5, merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [33, 36, "CELL"],
+            [40, 43, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the data in AN3 through AO7 and merge one more time.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [18, 21, "CELL"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge, combine, and unify the cells from B4 to C8.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [41, 43, "CELL"],
+            [47, 49, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and blend the data in cells D3 to E7, merge once more.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [34, 36, "CELL"],
+            [40, 42, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and consolidate the values in F2 through G6 and merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [36, 38, "CELL"],
+            [47, 49, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the cells from H4 to I8 and merge them again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [21, 23, "CELL"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "join, merge, and group the cells from J1 to K5, then merge.\r",
+        {
+          "entities": [
+            [6, 11, "MERGE"],
+            [38, 40, "CELL"],
+            [44, 46, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the values in L2 through M6 and merge one more time.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [20, 22, "CELL"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge and connect the content in N3 to O7, merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [33, 35, "CELL"],
+            [39, 41, "CELL"]
+          ]
+        }
+      ],
+      [
+        "unite and merge the cells from P2 through Q6, then merge one more time.\r",
+        {
+          "entities": [
+            [10, 15, "MERGE"],
+            [31, 33, "CELL"],
+            [42, 44, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the data in R1 to S5, merge again.\r",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [18, 20, "CELL"],
+            [24, 26, "CELL"]
+          ]
+        }
+      ],
+      [
+        "merge the cells from T3 through U7 and merge them once more.",
+        {
+          "entities": [
+            [0, 5, "MERGE"],
+            [21, 23, "CELL"],
+            [32, 34, "CELL"]
+          ]
+        }
+      ],
+      [
+        "apply italics to the text in cell B3.\r",
+        {
+          "entities": [
+            [6, 13, "ITALIC"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "format the content in cell C7 to be in italics.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [39, 46, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "change the font style to italic for the text in cell D1.\r",
+        {
+          "entities": [
+            [25, 31, "ITALIC"],
+            [53, 55, "CELL"]
+          ]
+        }
+      ],
+      [
+        "italicize the text within cell E4.\r",
+        {
+          "entities": [
+            [0, 9, "ITALIC"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "set the text in cell F2 to appear in an italic font.\r",
+        {
+          "entities": [
+            [21, 23, "CELL"],
+            [40, 46, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "style the content of cell G6 with italics.\r",
+        {
+          "entities": [
+            [26, 28, "CELL"],
+            [34, 41, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "make the text slant in cell H5.\r",
+        {
+          "entities": [
+            [14, 19, "ITALIC"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "use the italic font style for the text in cell I9.\r",
+        {
+          "entities": [
+            [8, 14, "ITALIC"],
+            [47, 49, "CELL"]
+          ]
+        }
+      ],
+      [
+        "emphasize the text in cell J8 by making it italic.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [43, 49, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "render the text in cell K2 in an italic typeface.\r",
+        {
+          "entities": [
+            [24, 26, "CELL"],
+            [33, 39, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "apply an italic formatting to the content of cell L4.\r",
+        {
+          "entities": [
+            [9, 15, "ITALIC"],
+            [50, 52, "CELL"]
+          ]
+        }
+      ],
+      [
+        "put the text in cell M6 in italics.\r",
+        {
+          "entities": [
+            [21, 23, "CELL"],
+            [27, 34, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "alter the text in cell N3 to appear in an italic style.\r",
+        {
+          "entities": [
+            [23, 25, "CELL"],
+            [42, 48, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "change the font of the text in cell O5 to italic.\r",
+        {
+          "entities": [
+            [36, 38, "CELL"],
+            [42, 48, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "style the text within cell P7 as italicized.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [33, 43, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "set the text in cell Q9 to have an italic appearance.\r",
+        {
+          "entities": [
+            [21, 23, "CELL"],
+            [35, 41, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "make the text within cell R1 slanted and italic.\r",
+        {
+          "entities": [
+            [26, 28, "CELL"],
+            [41, 47, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "format the content of cell S2 with an italic typeface.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [38, 44, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "emphasize the text in cell T8 by using italics.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [39, 46, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "render the text in cell U7 using an italic font style.\r",
+        {
+          "entities": [
+            [24, 26, "CELL"],
+            [36, 42, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "bold cell A1.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make cell B2 bold.\r",
+        {
+          "entities": [
+            [10, 12, "CELL"],
+            [13, 17, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold formatting to cell C3.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [30, 32, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold the text in cell D4.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell E5 to bold.\r",
+        {
+          "entities": [
+            [12, 14, "CELL"],
+            [18, 22, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "make the content in cell F6 bold.\r",
+        {
+          "entities": [
+            [25, 27, "CELL"],
+            [28, 32, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold cell G7.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "apply bold styling to cell H8.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold the data in cell I9.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make cell J10 bold.\r",
+        {
+          "entities": [
+            [10, 13, "CELL"],
+            [14, 18, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the text in cell K11.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell L12 to bold.\r",
+        {
+          "entities": [
+            [12, 15, "CELL"],
+            [19, 23, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold formatting to cell M13.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold cell N14.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make the content in cell O15 bold.\r",
+        {
+          "entities": [
+            [25, 28, "CELL"],
+            [29, 33, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the data in cell P16.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell Q17 to bold.\r",
+        {
+          "entities": [
+            [12, 15, "CELL"],
+            [19, 23, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold styling to cell R18.\r",
+        {
+          "entities": [
+            [22, 26, "CELL"],
+            [27, 30, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold cell S19.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make the text in cell T20 bold.\r",
+        {
+          "entities": [
+            [22, 25, "CELL"],
+            [26, 30, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the content in cell U21.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [25, 28, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell V22 to bold.\r",
+        {
+          "entities": [
+            [12, 15, "CELL"],
+            [19, 23, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold formatting to cell W23.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold cell X24.\r",
+        {
+          "entities": [
+            [5, 9, "CELL"],
+            [10, 13, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "make the data in cell Y25 bold.\r",
+        {
+          "entities": [
+            [22, 25, "CELL"],
+            [26, 30, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the text in cell Z26.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell AA27 to bold.\r",
+        {
+          "entities": [
+            [12, 16, "CELL"],
+            [20, 24, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold styling to cell BB28.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [27, 31, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold cell CC29.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make the content in cell DD30 bold.",
+        {
+          "entities": [
+            [25, 29, "CELL"],
+            [30, 34, "BOLD"]
+          ]
+        }
+      ]
+    ]
+  }

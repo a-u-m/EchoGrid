@@ -1,0 +1,465 @@
+{
+    "classes": [
+      "CELL",
+      "COPY",
+      "PASTE",
+      "COPYPASTE",
+      "COLUMN",
+      "DELETE",
+      "MERGE",
+      "ITALIC",
+      "BOLD"
+    ],
+    "annotations": [
+      [
+        "apply italics to the text in cell B3.\r",
+        {
+          "entities": [
+            [6, 13, "ITALIC"],
+            [34, 36, "CELL"]
+          ]
+        }
+      ],
+      [
+        "format the content in cell C7 to be in italics.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [39, 46, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "change the font style to italic for the text in cell D1.\r",
+        {
+          "entities": [
+            [25, 31, "ITALIC"],
+            [53, 55, "CELL"]
+          ]
+        }
+      ],
+      [
+        "italicize the text within cell E4.\r",
+        {
+          "entities": [
+            [0, 9, "ITALIC"],
+            [31, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "set the text in cell F2 to appear in an italic font.\r",
+        {
+          "entities": [
+            [21, 23, "CELL"],
+            [40, 46, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "style the content of cell G6 with italics.\r",
+        {
+          "entities": [
+            [26, 28, "CELL"],
+            [34, 41, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "make the text slant in cell H5.\r",
+        {
+          "entities": [
+            [14, 19, "ITALIC"],
+            [28, 30, "CELL"]
+          ]
+        }
+      ],
+      [
+        "use the italic font style for the text in cell I9.\r",
+        {
+          "entities": [
+            [8, 14, "ITALIC"],
+            [47, 49, "CELL"]
+          ]
+        }
+      ],
+      [
+        "emphasize the text in cell J8 by making it italic.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [43, 49, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "render the text in cell K2 in an italic typeface.\r",
+        {
+          "entities": [
+            [24, 26, "CELL"],
+            [33, 39, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "apply an italic formatting to the content of cell L4.\r",
+        {
+          "entities": [
+            [9, 15, "ITALIC"],
+            [50, 52, "CELL"]
+          ]
+        }
+      ],
+      [
+        "put the text in cell M6 in italics.\r",
+        {
+          "entities": [
+            [21, 23, "CELL"],
+            [27, 34, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "alter the text in cell N3 to appear in an italic style.\r",
+        {
+          "entities": [
+            [23, 25, "CELL"],
+            [42, 48, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "change the font of the text in cell O5 to italic.\r",
+        {
+          "entities": [
+            [36, 38, "CELL"],
+            [42, 48, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "style the text within cell P7 as italicized.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [33, 43, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "set the text in cell Q9 to have an italic appearance.\r",
+        {
+          "entities": [
+            [21, 23, "CELL"],
+            [35, 41, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "make the text within cell R1 slanted and italic.\r",
+        {
+          "entities": [
+            [26, 28, "CELL"],
+            [41, 47, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "format the content of cell S2 with an italic typeface.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [38, 44, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "emphasize the text in cell T8 by using italics.\r",
+        {
+          "entities": [
+            [27, 29, "CELL"],
+            [39, 46, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "render the text in cell U7 using an italic font style.\r",
+        {
+          "entities": [
+            [24, 26, "CELL"],
+            [36, 42, "ITALIC"]
+          ]
+        }
+      ],
+      [
+        "bold cell A1.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make cell B2 bold.\r",
+        {
+          "entities": [
+            [10, 12, "CELL"],
+            [13, 17, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold formatting to cell C3.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [30, 32, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold the text in cell D4.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell E5 to bold.\r",
+        {
+          "entities": [
+            [12, 14, "CELL"],
+            [18, 22, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "make the content in cell F6 bold.\r",
+        {
+          "entities": [
+            [25, 27, "CELL"],
+            [28, 32, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold cell G7.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 12, "CELL"]
+          ]
+        }
+      ],
+      [
+        "apply bold styling to cell H8.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [27, 29, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold the data in cell I9.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 24, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make cell J10 bold.\r",
+        {
+          "entities": [
+            [10, 13, "CELL"],
+            [14, 18, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the text in cell K11.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell L12 to bold.\r",
+        {
+          "entities": [
+            [12, 15, "CELL"],
+            [19, 23, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold formatting to cell M13.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold cell N14.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make the content in cell O15 bold.\r",
+        {
+          "entities": [
+            [25, 28, "CELL"],
+            [29, 33, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the data in cell P16.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell Q17 to bold.\r",
+        {
+          "entities": [
+            [12, 15, "CELL"],
+            [19, 23, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold styling to cell R18.\r",
+        {
+          "entities": [
+            [22, 26, "CELL"],
+            [27, 30, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold cell S19.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 13, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make the text in cell T20 bold.\r",
+        {
+          "entities": [
+            [22, 25, "CELL"],
+            [26, 30, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the content in cell U21.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [25, 28, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell V22 to bold.\r",
+        {
+          "entities": [
+            [12, 15, "CELL"],
+            [19, 23, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold formatting to cell W23.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [30, 33, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold cell X24.\r",
+        {
+          "entities": [
+            [5, 9, "CELL"],
+            [10, 13, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "make the data in cell Y25 bold.\r",
+        {
+          "entities": [
+            [22, 25, "CELL"],
+            [26, 30, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "bold the text in cell Z26.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [22, 25, "CELL"]
+          ]
+        }
+      ],
+      [
+        "change cell AA27 to bold.\r",
+        {
+          "entities": [
+            [12, 16, "CELL"],
+            [20, 24, "BOLD"]
+          ]
+        }
+      ],
+      [
+        "apply bold styling to cell BB28.\r",
+        {
+          "entities": [
+            [6, 10, "BOLD"],
+            [27, 31, "CELL"]
+          ]
+        }
+      ],
+      [
+        "bold cell CC29.\r",
+        {
+          "entities": [
+            [0, 4, "BOLD"],
+            [10, 14, "CELL"]
+          ]
+        }
+      ],
+      [
+        "make the content in cell DD30 bold.",
+        {
+          "entities": [
+            [25, 29, "CELL"],
+            [30, 34, "BOLD"]
+          ]
+        }
+      ]
+    ]
+  }

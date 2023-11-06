@@ -901,6 +901,496 @@
             [20, 22, "CELL"]
           ]
         }
+      ],
+      [
+        "Replace Dhruv with Prathamesh.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 13, "VALUE"],
+            [19, 29, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap chocolate with ice cream.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 14, "VALUE"],
+            [20, 29, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute banana for apple.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 17, "VALUE"],
+            [22, 27, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change bike to car.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 11, "VALUE"],
+            [15, 18, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange rose for sunflower.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 13, "VALUE"],
+            [18, 27, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace blue with red.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 12, "VALUE"],
+            [18, 21, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap Wednesday with Monday.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 14, "VALUE"],
+            [20, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute sushi for pizza.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 16, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change pencil to pen.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 13, "VALUE"],
+            [17, 20, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange basketball for football.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 19, "VALUE"],
+            [24, 32, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace winter with summer.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 14, "VALUE"],
+            [20, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap strawberry with mango.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 15, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute magazine for book.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 19, "VALUE"],
+            [24, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change mountains to beach.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 16, "VALUE"],
+            [20, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange text message for email.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 21, "VALUE"],
+            [26, 31, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace student with teacher.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 15, "VALUE"],
+            [21, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap tea with coffee.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 8, "VALUE"],
+            [14, 20, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute play for movie.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 15, "VALUE"],
+            [20, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change cat to dog.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 10, "VALUE"],
+            [14, 17, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange sandals for shoes.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 16, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace river with lake.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 13, "VALUE"],
+            [19, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap tablet with computer.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 11, "VALUE"],
+            [17, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute motel for hotel.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 16, "VALUE"],
+            [21, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change piano to guitar.",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 12, "VALUE"],
+            [16, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace soda with juice.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 12, "VALUE"],
+            [18, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap sweater with jacket.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 12, "VALUE"],
+            [18, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute soccer for football.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 17, "VALUE"],
+            [22, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change conference to meeting.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 17, "VALUE"],
+            [21, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange bus for train.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 12, "VALUE"],
+            [17, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace appetizer with dessert.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 17, "VALUE"],
+            [23, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap fish with chicken.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 9, "VALUE"],
+            [15, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute coworker for colleague.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 19, "VALUE"],
+            [24, 33, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change nurse to doctor.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 12, "VALUE"],
+            [16, 22, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange sunny for cloudy.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 14, "VALUE"],
+            [19, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace raincoat with umbrella.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 16, "VALUE"],
+            [22, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap bookstore with library.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 14, "VALUE"],
+            [20, 27, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute park for gym.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 15, "VALUE"],
+            [20, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change concert hall to movie theater.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 19, "VALUE"],
+            [23, 36, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange skateboard for bike.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 19, "VALUE"],
+            [24, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace hot dog with hamburger.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 15, "VALUE"],
+            [21, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap vacation with holiday.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 13, "VALUE"],
+            [19, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute guardian for parent.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 19, "VALUE"],
+            [24, 30, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change hat to sunglasses.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 10, "VALUE"],
+            [14, 24, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange salad for soup.\r",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 14, "VALUE"],
+            [19, 23, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Replace tablet with phone.\r",
+        {
+          "entities": [
+            [0, 7, "REPLACE"],
+            [8, 14, "VALUE"],
+            [20, 25, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Swap company with business.\r",
+        {
+          "entities": [
+            [0, 4, "REPLACE"],
+            [5, 12, "VALUE"],
+            [18, 26, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Substitute podcast for music.\r",
+        {
+          "entities": [
+            [0, 10, "REPLACE"],
+            [11, 18, "VALUE"],
+            [23, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Change magazine to newspaper.\r",
+        {
+          "entities": [
+            [0, 6, "REPLACE"],
+            [7, 15, "VALUE"],
+            [19, 28, "VALUE"]
+          ]
+        }
+      ],
+      [
+        "Exchange cafe for restaurant.",
+        {
+          "entities": [
+            [0, 8, "REPLACE"],
+            [9, 13, "VALUE"],
+            [18, 28, "VALUE"]
+          ]
+        }
       ]
     ]
   }
