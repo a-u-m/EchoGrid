@@ -66,6 +66,81 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
         console.log(val);
         updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(), val, 'USER_ENTERED');
       }
+
+
+      // else if (wordArray[0].toLowerCase() === 'delete') {
+      //   if (wordArray[1].toLowerCase() === 'colum' || wordArray[1].toLowerCase() === 'column') {
+      //     deleteColumn(spreadsheetId, wordArray[2]);
+      //   }
+      //   if (wordArray[1].toLowerCase() === 'row') {
+      //     deleteRow(spreadsheetId, wordArray[2]);
+      //   }
+      // } 
+      
+      // else if (wordArray[0].toLowerCase() === 'replace') {
+      //   let find = '';
+      //   let replace = '';
+      //   let i = 1;
+      //   let isReplace = false;
+
+      //   for (i; i < wordArray.length; i++) {
+      //     if (wordArray[i] == 'with') {
+      //       isReplace = true;
+      //       continue;
+      //     }
+
+      //     if (isReplace) {
+      //       if (replace === '') {
+      //         replace += wordArray[i];
+      //       } else {
+      //         replace += ' ' + wordArray[i];
+      //       }
+      //     } else {
+      //       if (find === '') {
+      //         find += wordArray[i];
+      //       } else {
+      //         find += ' ' + wordArray[i];
+      //       }
+      //     }
+      //   }
+
+      //   console.log('Find : ' + find + ' Replace : ' + replace);
+      //   find_replace(spreadsheetId, find, replace);
+
+      //   // find_replace(spreadsheetId, 'king', 'prathamesh');
+      // } 
+      
+
+      else if (response_entities.commands[0].toLowerCase() === 'bold' && cellPattern.test(response_entities.cells[0])) {
+        bold_text(
+          spreadsheetId,
+          activeSheetName +
+            '!' +
+            response_entities.cells[0].toUpperCase() +
+            ':' +
+            response_entities.cells[0].toUpperCase(),
+        );
+      } else if (response_entities.commands[0].toLowerCase() === 'italic' && cellPattern.test(response_entities.cells[0])) {
+        italic_text(
+          spreadsheetId,
+          activeSheetName +
+            '!' +
+            response_entities.cells[0].toUpperCase() +
+            ':' +
+            response_entities.cells[0].toUpperCase(),
+        );
+      } else if (response_entities.commands[0].toLowerCase() === 'merge') {
+        merge_cells(
+          spreadsheetId,
+          activeSheetName +
+            '!' +
+            response_entities.cells[0].toUpperCase() +
+            ':' +
+            response_entities.cells[1].toUpperCase(),
+        );
+      }
+
+
     }
   }
 });
