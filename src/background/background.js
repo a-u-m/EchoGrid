@@ -379,3 +379,204 @@ const find_replace = async (spreadsheetId, find, replace) => {
     console.error('Error replacing values', error);
   }
 };
+
+
+
+function columnLetterToIndex(letter = null) {
+  letter = letter.toUpperCase();
+  return [...letter].reduce((c, e, i, a) => (c += (e.charCodeAt(0) - 64) * Math.pow(26, a.length - i - 1)), -1);
+}
+
+function columnIndexToLetter(index = null) {
+  return (a = Math.floor(index / 26)) >= 0 ? columnIndexToLetter(a - 1) + String.fromCharCode(65 + (index % 26)) : '';
+}
+
+function convA1NotationToGridRange(sheetId, a1Notation) {
+  const { col, row } = a1Notation
+    .toUpperCase()
+    .split('!')
+    .map((f) => f.split(':'))
+    .pop()
+    .reduce(
+      (o, g) => {
+        var [r1, r2] = ['[A-Z]+', '[0-9]+'].map((h) => g.match(new RegExp(h)));
+        o.col.push(r1 && columnLetterToIndex(r1[0]));
+        o.row.push(r2 && Number(r2[0]));
+        return o;
+      },
+      { col: [], row: [] },
+    );
+  col.sort((a, b) => (a > b ? 1 : -1));
+  row.sort((a, b) => (a > b ? 1 : -1));
+  const [start, end] = col.map((e, i) => ({ col: e, row: row[i] }));
+  const gridRange = {
+    startRowIndex: start?.row && start.row - 1,
+    endRowIndex: end?.row ? end.row : start.row,
+    startColumnIndex: start && start.col,
+    endColumnIndex: end ? end.col + 1 : 1,
+  };
+  if (gridRange.startRowIndex === null) {
+    gridRange.startRowIndex = 0;
+    delete gridRange.endRowIndex;
+  }
+  if (gridRange.startColumnIndex === null) {
+    gridRange.startColumnIndex = 0;
+    delete gridRange.endColumnIndex;
+  }
+  return gridRange;
+}
+
+const bold_text = async (spreadsheetId, range) => {
+  try {
+    const token = await checkAuthentication();
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    var gridRange = convA1NotationToGridRange(spreadsheetId, range);
+
+    const requests = [
+      {
+        repeatCell: {
+          range: {
+            startRowIndex: gridRange.startRowIndex,
+            endRowIndex: gridRange.endRowIndex,
+            startColumnIndex: gridRange.startColumnIndex,
+            endColumnIndex: gridRange.endColumnIndex,
+          },
+          cell: {
+            userEnteredFormat: {
+              textFormat: {
+                bold: true,
+              },
+            },
+          },
+          fields: 'userEnteredFormat(textFormat)',
+        },
+      },
+    ];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to make bold: ${responseData.error.message}`);
+    }
+
+    console.log(`Made cell bold`);
+  } catch (error) {
+    console.error('Error to make bold', error);
+  }
+};
+
+const italic_text = async (spreadsheetId, range) => {
+  try {
+    const token = await checkAuthentication();
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    var gridRange = convA1NotationToGridRange(spreadsheetId, range);
+
+    const requests = [
+      {
+        repeatCell: {
+          range: {
+            startRowIndex: gridRange.startRowIndex,
+            endRowIndex: gridRange.endRowIndex,
+            startColumnIndex: gridRange.startColumnIndex,
+            endColumnIndex: gridRange.endColumnIndex,
+          },
+          cell: {
+            userEnteredFormat: {
+              textFormat: {
+                italic: true,
+              },
+            },
+          },
+          fields: 'userEnteredFormat(textFormat)',
+        },
+      },
+    ];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to make italic: ${responseData.error.message}`);
+    }
+
+    console.log(`Made cell italic`);
+  } catch (error) {
+    console.error('Error to make italic', error);
+  }
+};
+
+const merge_cells = async (spreadsheetId, range) => {
+  try {
+    const token = await checkAuthentication();
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    var gridRange = convA1NotationToGridRange(spreadsheetId, range);
+
+    const requests = [
+      {
+        mergeCells: {
+          range: {
+            startRowIndex: gridRange.startRowIndex,
+            endRowIndex: gridRange.endRowIndex,
+            startColumnIndex: gridRange.startColumnIndex,
+            endColumnIndex: gridRange.endColumnIndex,
+          },
+          mergeType: 'MERGE_ALL',
+        },
+      },
+    ];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to merge: ${responseData.error.message}`);
+    }
+
+    console.log(`merged successfully`);
+  } catch (error) {
+    console.error('Error to merge', error);
+  }
+};
