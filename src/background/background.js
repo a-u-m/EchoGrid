@@ -59,59 +59,59 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
       //       val += ' ' + wordArray[i];
       //     }
       //   }
-      if (response_entities.commands[0].toLowerCase() === 'type b' && cellPattern.test(response_entities.cells[0])) {
+      if (response_entities.commands[0].toLowerCase() === 'delete' && cellPattern.test(response_entities.cells[0])) {
         updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(),'', 'USER_ENTERED');
-      } else if (response_entities.commands[0].toLowerCase() === 'type a' && cellPattern.test(response_entities.cells[0])) {
+      } else if (response_entities.commands[0].toLowerCase() === 'insert' && cellPattern.test(response_entities.cells[0])) {
         let val = response_entities.values[0]
         console.log(val);
         updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(), val, 'USER_ENTERED');
       }
 
 
-      // else if (wordArray[0].toLowerCase() === 'delete') {
-      //   if (wordArray[1].toLowerCase() === 'colum' || wordArray[1].toLowerCase() === 'column') {
-      //     deleteColumn(spreadsheetId, wordArray[2]);
-      //   }
-      //   if (wordArray[1].toLowerCase() === 'row') {
-      //     deleteRow(spreadsheetId, wordArray[2]);
-      //   }
-      // } 
-      
-      // else if (wordArray[0].toLowerCase() === 'replace') {
-      //   let find = '';
-      //   let replace = '';
-      //   let i = 1;
-      //   let isReplace = false;
+      else if (response_entities.commands[0].toLowerCase() === 'delete') {
+        // if (response_entities.column.length != 0) {
+        //   deleteColumn(spreadsheetId, response_entities.column[0]);
+        // }
+        if ((response_entities.row).length !== 0) {
+          deleteRow(spreadsheetId, response_entities.row[0]);
+        }
+      } else if (response_entities.commands[0].toLowerCase() === 'replace') {
+        // let find = '';
+        // let replace = '';
+        // let i = 1;
+        // let isReplace = false;
 
-      //   for (i; i < wordArray.length; i++) {
-      //     if (wordArray[i] == 'with') {
-      //       isReplace = true;
-      //       continue;
-      //     }
+        // for (i; i < wordArray.length; i++) {
+        //   if (wordArray[i] == 'with') {
+        //     isReplace = true;
+        //     continue;
+        //   }
 
-      //     if (isReplace) {
-      //       if (replace === '') {
-      //         replace += wordArray[i];
-      //       } else {
-      //         replace += ' ' + wordArray[i];
-      //       }
-      //     } else {
-      //       if (find === '') {
-      //         find += wordArray[i];
-      //       } else {
-      //         find += ' ' + wordArray[i];
-      //       }
-      //     }
-      //   }
+        //   if (isReplace) {
+        //     if (replace === '') {
+        //       replace += wordArray[i];
+        //     } else {
+        //       replace += ' ' + wordArray[i];
+        //     }
+        //   } else {
+        //     if (find === '') {
+        //       find += wordArray[i];
+        //     } else {
+        //       find += ' ' + wordArray[i];
+        //     }
+        //   }
+        // }
 
-      //   console.log('Find : ' + find + ' Replace : ' + replace);
-      //   find_replace(spreadsheetId, find, replace);
+        let find = response_entities.values[0];
+        let replace = response_entities.values[1];
+        console.log('Find : ' + find + ' Replace : ' + replace);
+        find_replace(spreadsheetId, find, replace);
 
-      //   // find_replace(spreadsheetId, 'king', 'prathamesh');
-      // } 
-      
-
-      else if (response_entities.commands[0].toLowerCase() === 'bold' && cellPattern.test(response_entities.cells[0])) {
+        // find_replace(spreadsheetId, 'king', 'prathamesh');
+      } else if (
+        response_entities.commands[0].toLowerCase() === 'bold' &&
+        cellPattern.test(response_entities.cells[0])
+      ) {
         bold_text(
           spreadsheetId,
           activeSheetName +
@@ -120,7 +120,10 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
             ':' +
             response_entities.cells[0].toUpperCase(),
         );
-      } else if (response_entities.commands[0].toLowerCase() === 'italic' && cellPattern.test(response_entities.cells[0])) {
+      } else if (
+        response_entities.commands[0].toLowerCase() === 'italic' &&
+        cellPattern.test(response_entities.cells[0])
+      ) {
         italic_text(
           spreadsheetId,
           activeSheetName +
@@ -164,8 +167,10 @@ const extractEntitiesFromText = async(text) => {
     const values = data.values;
     const commands = data.type_labels;
     const cells = data.cells;
+    const column = data.column;
+    const row = data.row;
 
-    return {commands : commands,cells:cells,values:values}
+    return {commands : commands,cells:cells,values:values, column:column, row: row}
   } catch (error) {
     console.error('Fetch error:', error);
   }
