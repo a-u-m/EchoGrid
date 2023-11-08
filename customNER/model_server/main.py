@@ -14,6 +14,7 @@ def extract_entities(text):
     cells = []
     column = []
     row = []
+    chart = []
     type_labels = []
 
     doc = nlp_ner(text)
@@ -29,13 +30,17 @@ def extract_entities(text):
             column.append(ent.text)
         elif ent.label_ == "ROW":
             row.append(ent.text)
+        elif ent.label_ == "CHART":
+            type_labels.append(ent.label_)
+            chart.append(ent.text)
 
     return {
         'values': values,
         'type_labels': type_labels,
         'cells': cells,
         'column': column,
-        'row': row
+        'row': row,
+        'chart': chart
     }
 
 @app.route('/predict', methods=['POST'])
