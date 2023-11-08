@@ -683,74 +683,84 @@ const merge_cells = async (spreadsheetId, range) => {
 };
 
 
-
 const insert_chart = async (spreadsheetId, range, chart) => {
   try {
     const token = await checkAuthentication();
 
     const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
 
-    var gridRange = convA1NotationToGridRange(spreadsheetId, range);
+    const gridRange = convA1NotationToGridRange(spreadsheetId, range);
 
-    console.log(chart);
+    const columnCount = gridRange.endColumnIndex - gridRange.startColumnIndex + 1;
+    const seriesRequests = [];
 
-    const requests = [
-      {
-        // addChart: {
-        //   chart: {
-        // startRowIndex: gridRange.startRowIndex,
-        // endRowIndex: gridRange.endRowIndex,
-        // startColumnIndex: gridRange.startColumnIndex,
-        // endColumnIndex: gridRange.endColumnIndex,
-        //   },
-        //   mergeType: 'MERGE_ALL',
-        // },
-
-        addChart: {
-          chart: {
-            spec: {
-              title: 'Testing Chart',
-              basicChart: {
-                chartType: chart,
-                legendPosition: 'BOTTOM_LEGEND',
-                axis: [
-                  // x-axis
-                  {
-                    position: 'BOTTOM_AXIS',
-                    title: '  X-AXIS',
-                  },
-                  // y-axis
-                  {
-                    position: 'LEFT_AXIS',
-                    title: 'Y-AXIS',
-                  },
-                ],
-                series: [
-                  {
-                    series: {
-                      sourceRange: {
-                        sources: [
-                          {
-                            startRowIndex: gridRange.startRowIndex,
-                            endRowIndex: gridRange.endRowIndex,
-                            startColumnIndex: gridRange.startColumnIndex,
-                            endColumnIndex: gridRange.endColumnIndex,
-                          },
-                        ],
-                      },
-                    },
-                    targetAxis: 'LEFT_AXIS',
-                  },
-                ],
+    for (let i = 1; i < columnCount; i++) {
+      const seriesRequest = {
+        series: {
+          sourceRange: {
+            sources: [
+              {
+                startRowIndex: gridRange.startRowIndex,
+                endRowIndex: gridRange.endRowIndex,
+                startColumnIndex: gridRange.startColumnIndex + i,
+                endColumnIndex: gridRange.startColumnIndex + i + 1,
               },
+            ],
+          },
+        },
+        targetAxis: 'LEFT_AXIS',
+      };
+      seriesRequests.push(seriesRequest);
+    }
+
+    const chartRequest = {
+      addChart: {
+        chart: {
+          spec: {
+            title: `${chart} Chart`,
+            basicChart: {
+              chartType: chart,
+              legendPosition: 'BOTTOM_LEGEND',
+              axis: [
+                // x-axis
+                {
+                  position: 'BOTTOM_AXIS',
+                  title: 'X-AXIS',
+                },
+                // y-axis
+                {
+                  position: 'LEFT_AXIS',
+                  title: 'Y-AXIS',
+                },
+              ],
+              domains: [
+                {
+                  domain: {
+                    sourceRange: {
+                      sources: [
+                        {
+                          startRowIndex: gridRange.startRowIndex,
+                          endRowIndex: gridRange.endRowIndex,
+                          startColumnIndex: gridRange.startColumnIndex,
+                          endColumnIndex: gridRange.startColumnIndex + 1,
+                        },
+                      ],
+                    },
+                  },
+                },
+              ],
+              series: seriesRequests,
+              headerCount: 1,
             },
-            position: {
-              newSheet: true,
-            },
+          },
+          position: {
+            newSheet: true,
           },
         },
       },
-    ];
+    };
+
+    const requests = [chartRequest];
 
     const requestBody = {
       requests: requests,
@@ -771,8 +781,8 @@ const insert_chart = async (spreadsheetId, range, chart) => {
       throw new Error(`Failed to merge: ${responseData.error.message}`);
     }
 
-    console.log(`merged successfully`);
+    console.log(`Chart added successfully`);
   } catch (error) {
-    console.error('Error to merge', error);
+    console.error('Error adding chart', error);
   }
 };
