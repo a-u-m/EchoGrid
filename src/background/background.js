@@ -60,19 +60,29 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
       //     }
       //   }
       if (response_entities.commands[0].toLowerCase() === 'delete' && cellPattern.test(response_entities.cells[0])) {
-        updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(),'', 'USER_ENTERED');
-      } else if (response_entities.commands[0].toLowerCase() === 'insert' && cellPattern.test(response_entities.cells[0])) {
-        let val = response_entities.values[0]
+        updateCellValue(
+          spreadsheetId,
+          activeSheetName + '!' + response_entities.cells[0].toUpperCase(),
+          '',
+          'USER_ENTERED',
+        );
+      } else if (
+        response_entities.commands[0].toLowerCase() === 'insert' &&
+        cellPattern.test(response_entities.cells[0])
+      ) {
+        let val = response_entities.values[0];
         console.log(val);
-        updateCellValue(spreadsheetId, activeSheetName + '!' + response_entities.cells[0].toUpperCase(), val, 'USER_ENTERED');
-      }
-
-
-      else if (response_entities.commands[0].toLowerCase() === 'delete') {
+        updateCellValue(
+          spreadsheetId,
+          activeSheetName + '!' + response_entities.cells[0].toUpperCase(),
+          val,
+          'USER_ENTERED',
+        );
+      } else if (response_entities.commands[0].toLowerCase() === 'delete') {
         // if (response_entities.column.length != 0) {
         //   deleteColumn(spreadsheetId, response_entities.column[0]);
         // }
-        if ((response_entities.row).length !== 0) {
+        if (response_entities.row.length !== 0) {
           deleteRow(spreadsheetId, response_entities.row[0]);
         }
       } else if (response_entities.commands[0].toLowerCase() === 'replace') {
@@ -141,6 +151,16 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
             ':' +
             response_entities.cells[1].toUpperCase(),
         );
+      } else if (response_entities.commands[0].toLowerCase() === 'chart') {
+        insert_chart(
+          spreadsheetId,
+          activeSheetName +
+            '!' +
+            response_entities.cells[0].toUpperCase() +
+            ':' +
+            response_entities.cells[1].toUpperCase(),
+          response_entities.chart[0].toUpperCase(),
+        );
       }
 
 
@@ -169,8 +189,9 @@ const extractEntitiesFromText = async(text) => {
     const cells = data.cells;
     const column = data.column;
     const row = data.row;
+    const chart = data.chart;
 
-    return {commands : commands,cells:cells,values:values, column:column, row: row}
+    return {commands : commands,cells:cells,values:values, column:column, row: row, chart: chart}
   } catch (error) {
     console.error('Fetch error:', error);
   }
@@ -658,5 +679,110 @@ const merge_cells = async (spreadsheetId, range) => {
     console.log(`merged successfully`);
   } catch (error) {
     console.error('Error to merge', error);
+  }
+};
+
+
+const insert_chart = async (spreadsheetId, range, chart) => {
+  try {
+    const token = await checkAuthentication();
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}:batchUpdate`;
+
+    const gridRange = convA1NotationToGridRange(spreadsheetId, range);
+
+    const columnCount = gridRange.endColumnIndex - gridRange.startColumnIndex + 1;
+    const seriesRequests = [];
+
+    for (let i = 1; i < columnCount; i++) {
+      const seriesRequest = {
+        series: {
+          sourceRange: {
+            sources: [
+              {
+                startRowIndex: gridRange.startRowIndex,
+                endRowIndex: gridRange.endRowIndex,
+                startColumnIndex: gridRange.startColumnIndex + i,
+                endColumnIndex: gridRange.startColumnIndex + i + 1,
+              },
+            ],
+          },
+        },
+        targetAxis: 'LEFT_AXIS',
+      };
+      seriesRequests.push(seriesRequest);
+    }
+
+    const chartRequest = {
+      addChart: {
+        chart: {
+          spec: {
+            title: `${chart} Chart`,
+            basicChart: {
+              chartType: chart,
+              legendPosition: 'BOTTOM_LEGEND',
+              axis: [
+                // x-axis
+                {
+                  position: 'BOTTOM_AXIS',
+                  title: 'X-AXIS',
+                },
+                // y-axis
+                {
+                  position: 'LEFT_AXIS',
+                  title: 'Y-AXIS',
+                },
+              ],
+              domains: [
+                {
+                  domain: {
+                    sourceRange: {
+                      sources: [
+                        {
+                          startRowIndex: gridRange.startRowIndex,
+                          endRowIndex: gridRange.endRowIndex,
+                          startColumnIndex: gridRange.startColumnIndex,
+                          endColumnIndex: gridRange.startColumnIndex + 1,
+                        },
+                      ],
+                    },
+                  },
+                },
+              ],
+              series: seriesRequests,
+              headerCount: 1,
+            },
+          },
+          position: {
+            newSheet: true,
+          },
+        },
+      },
+    };
+
+    const requests = [chartRequest];
+
+    const requestBody = {
+      requests: requests,
+    };
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to merge: ${responseData.error.message}`);
+    }
+
+    console.log(`Chart added successfully`);
+  } catch (error) {
+    console.error('Error adding chart', error);
   }
 };
