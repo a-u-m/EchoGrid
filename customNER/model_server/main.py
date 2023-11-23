@@ -6,7 +6,7 @@ import spacy
 app = Flask(__name__)
 CORS(app)
 
-model_path = os.path.join(os.path.dirname(__file__), "../model/model-best/model-best")
+model_path = os.path.join(os.path.dirname(__file__), "../model/model-best")
 nlp_ner = spacy.load(model_path)
 
 def extract_entities(text):
