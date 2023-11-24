@@ -1,19 +1,33 @@
+import './content.css';
 const createSheetExtensionIcon = () => {
   const iconContainer = document.createElement('div');
   iconContainer.id = 'sheet-extension-icon';
-  iconContainer.style.width = '24px';
-  iconContainer.style.height = '24px';
-  iconContainer.style.backgroundColor = 'red';
-  iconContainer.style.cursor = 'pointer';
-
+  iconContainer.classList.add('icon-container'); // Added a CSS class for styling
+  iconContainer.innerHTML = '<i class="fas fa-microphone"></i>'; // Using Font Awesome for the microphone icon
   return iconContainer;
+};
+const showRecognition = () => {
+  const textContainer = document.createElement('div');
+  textContainer.id = 'NLP';
+  textContainer.style.display = 'flex';
+  textContainer.style.alignItems = 'center';
+  textContainer.style.justifyContent = 'center';
+  textContainer.style.position = 'absolute';
+  textContainer.style.maxWidth = '50vw';
+  textContainer.style.zIndex = '1000';
+  textContainer.style.left = '20%';
+  textContainer.style.top = '5%';
+  textContainer.style.fontSize = '3rem';
+  textContainer.style.color = 'white';
+  textContainer.style.background='#848884'
+  return textContainer;
 };
 
 const initializeVoiceRecognition = () => {
   let finalTranscript = '';
   const recognition = new webkitSpeechRecognition();
   recognition.continuous = true;
-  recognition.interimResults = false;
+  recognition.interimResults = true;
 
   recognition.onstart = () => {
     console.log('Recognition started');
@@ -27,11 +41,13 @@ const initializeVoiceRecognition = () => {
   };
 
   recognition.onresult = (event) => {
-    finalTranscript = event.results[0][0].transcript;
+    const interimTranscript = event.results[0][0].transcript;
+    finalTranscript = interimTranscript;
+    document.getElementById('NLP').innerHTML = finalTranscript;
   };
 
   recognition.onend = () => {
-    console.log(finalTranscript);
+    console.log('Recognition ended');
     chrome.runtime.sendMessage({ action: 'recognizedText', text: finalTranscript });
     finalTranscript = '';
   };
@@ -42,17 +58,28 @@ const initializeVoiceRecognition = () => {
 window.onload = () => {
   const sheetsToolbar = document.querySelector('.docs-titlebar-buttons');
   const iconContainer = createSheetExtensionIcon();
-  // const backgroundPortConnect = chrome.runtime.connect({ name: 'bg-port' });
+  const sheet = document.querySelector('.docs-gm');
+  const textContainer = showRecognition();
   const recognition = initializeVoiceRecognition();
   let isRecording = false;
+ const fontAwesomeLink = document.createElement('link');
+fontAwesomeLink.rel = 'stylesheet';
+fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+fontAwesomeLink.integrity = 'sha384-XI8J7luUdDl5LxxHqDEPvLYBqYZfMy8v1CswPn8CgpR9giRHzp5Gn14Gr1rAx7Bd';
+fontAwesomeLink.crossOrigin = 'anonymous';
+
+document.head.appendChild(fontAwesomeLink);
 
   if (sheetsToolbar) {
     sheetsToolbar.insertBefore(iconContainer, sheetsToolbar.firstChild);
     iconContainer.addEventListener('click', () => {
       if (isRecording) {
         recognition.stop();
-        iconContainer.style.backgroundColor = 'red';
+        iconContainer.style.backgroundColor = '#3498db';
+        document.getElementById('NLP').remove();
       } else {
+        sheet.insertBefore(textContainer, sheet.children[0]);
+        document.getElementById('NLP').innerHTML = 'Listening...';
         recognition.start();
         iconContainer.style.backgroundColor = 'green';
       }

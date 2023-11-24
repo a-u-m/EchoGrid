@@ -1,0 +1,60 @@
+Create a pie chart for the data in range A1 to E7.
+Generate a pie chart based on the values in cells B2 to F9.
+Design a pie chart using the table from A1 to E7.
+Produce a pie chart that represents the data in the range of B2 to F9.
+Plot a pie chart for the dataset found in A1 to E7.
+Chart a pie chart using values from cells B2 to F9.
+Make a pie chart to visualize the information in A1 to E7.
+Develop a pie chart for the dataset within cells B2 to F9.
+Illustrate the data in range A1 to E7 with a pie chart.
+Create a pie chart to display the contents of B2 to F9.
+Use a pie chart to represent the table from A1 to E7.
+Chart a pie graph for the information in cells B2 to F9.
+Make a pie chart for the data set in A1 to E7.
+Generate a pie chart using values from B2 to F9.
+Produce a pie chart to visualize the dataset in A1 to E7.
+Create a pie chart for the range that includes cells B2 to F9.
+Design a pie chart to illustrate the data in A1 to E7.
+Chart a pie chart based on the values in cells B2 to F9.
+Generate a pie chart for the table spanning A1 to E7.
+Create a pie chart for the dataset in cells B2 to F9.
+Create a bar chart for the data in range A1 to E7.
+Generate a bar chart based on the values in cells B2 to F9.
+Design a bar chart using the table from A1 to E7.
+Produce a bar chart that represents the data in the range of B2 to F9.
+Plot a bar chart for the dataset found in A1 to E7.
+Chart a bar chart using values from cells B2 to F9.
+Make a bar chart to visualize the information in A1 to E7.
+Develop a bar chart for the dataset within cells B2 to F9.
+Illustrate the data in range A1 to E7 with a bar chart.
+Create a bar chart to display the contents of B2 to F9.
+Use a bar chart to represent the table from A1 to E7.
+Chart a bar graph for the information in cells B2 to F9.
+Make a bar chart for the data set in A1 to E7.
+Generate a bar chart using values from B2 to F9.
+Produce a bar chart to visualize the dataset in A1 to E7.
+Create a bar chart for the range that includes cells B2 to F9.
+Design a bar chart to illustrate the data in A1 to E7.
+Chart a bar chart based on the values in cells B2 to F9.
+Generate a bar chart for the table spanning A1 to E7.
+Create a bar chart for the dataset in cells B2 to F9.
+Create a column chart for the data in range A1 to E7.
+Generate a column chart based on the values in cells B2 to F9.
+Design a column chart using the table from A1 to E7.
+Produce a column chart that represents the data in the range of B2 to F9.
+Plot a column chart for the dataset found in A1 to E7.
+Chart a column chart using values from cells B2 to F9.
+Make a column chart to visualize the information in A1 to E7.
+Develop a column chart for the dataset within cells B2 to F9.
+Illustrate the data in range A1 to E7 with a column chart.
+Create a column chart to display the contents of B2 to F9.
+Use a column chart to represent the table from A1 to E7.
+Chart a column graph for the information in cells B2 to F9.
+Make a column chart for the data set in A1 to E7.
+Generate a column chart using values from B2 to F9.
+Produce a column chart to visualize the dataset in A1 to E7.
+Create a column chart for the range that includes cells B2 to F9.
+Design a column chart to illustrate the data in A1 to E7.
+Chart a column chart based on the values in cells B2 to F9.
+Generate a column chart for the table spanning A1 to E7.
+Create a column chart for the dataset in cells B2 to F9.
