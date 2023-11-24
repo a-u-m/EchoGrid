@@ -2,11 +2,11 @@ import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import spacy
-
+import spacy_transformers
 app = Flask(__name__)
 CORS(app)
 
-model_path = os.path.join(os.path.dirname(__file__), "../model/_best_Model")
+model_path = os.path.join(os.path.dirname(__file__), "../model/best_Model")
 nlp_ner = spacy.load(model_path)
 
 def extract_entities(text):
@@ -22,7 +22,7 @@ def extract_entities(text):
     for ent in doc.ents:
         if ent.label_ == "VALUE":
             values.append(ent.text)
-        elif ent.label_ in ("INSERT", "DELETE", "REPLACE", "MERGE", "BOLD", "ITALIC"):
+        elif ent.label_ in ("INSERT", "DELETE", "REPLACE", "MERGE", "BOLD", "ITALIC","SUMALL","MULTIPLYALL"):
             type_labels.append(ent.label_)
         elif ent.label_ == "CELL":
             cells.append(ent.text)

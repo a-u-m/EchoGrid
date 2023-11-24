@@ -62,13 +62,13 @@ window.onload = () => {
   const textContainer = showRecognition();
   const recognition = initializeVoiceRecognition();
   let isRecording = false;
- const fontAwesomeLink = document.createElement('link');
-fontAwesomeLink.rel = 'stylesheet';
-fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
-fontAwesomeLink.integrity = 'sha384-XI8J7luUdDl5LxxHqDEPvLYBqYZfMy8v1CswPn8CgpR9giRHzp5Gn14Gr1rAx7Bd';
-fontAwesomeLink.crossOrigin = 'anonymous';
+//  const fontAwesomeLink = document.createElement('link');
+// fontAwesomeLink.rel = 'stylesheet';
+// fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css';
+// fontAwesomeLink.integrity = 'sha384-XI8J7luUdDl5LxxHqDEPvLYBqYZfMy8v1CswPn8CgpR9giRHzp5Gn14Gr1rAx7Bd';
+// fontAwesomeLink.crossOrigin = 'anonymous';
 
-document.head.appendChild(fontAwesomeLink);
+// document.head.appendChild(fontAwesomeLink);
 
   if (sheetsToolbar) {
     sheetsToolbar.insertBefore(iconContainer, sheetsToolbar.firstChild);

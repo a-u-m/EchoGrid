@@ -5,9 +5,10 @@ let spreadsheetId = null;
 let activeSheetName = null;
 let currentTabId = null;
 const columnPattern = /^[A-Za-z]{1,2}$/;
-
+let numericVal=null;
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
   console.log(tabId)
+  
   if (changeInfo.status === 'complete' && googleSheetsUrlPattern.test(tab.url)) {
     const spreadsheetIdMatch = tab.url.match(spreadsheetIdPattern);
     if (spreadsheetIdMatch) {
@@ -16,7 +17,10 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
       spreadsheetId = spreadsheetIdMatch[1];
       activeSheetName = await getActiveSheetName(tabId);
       await authenticateUser();
-      batchClearValues(spreadsheetId,activeSheetName+"!1:1")
+     numericVal=null;
+      // calculateAverageAndAddToRange(spreadsheetId,"A2:A10","A11");
+      createEmptyTable(spreadsheetId,activeSheetName,"B3",5,5);
+      batchClearValues(spreadsheetId,activeSheetName+"!1:1");
     }
   } 
 });
@@ -38,7 +42,9 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
   });
 });
 
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
   if (spreadsheetId && activeSheetName && currentTabId && sender.tab && sender.tab.id === currentTabId) {
     if (message.action === 'recognizedText') {
@@ -164,7 +170,32 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
               response_entities.cells[1].toUpperCase(),
             response_entities.chart[0].toUpperCase(),
           );
+        }else if(response_entities.commands[0].toLowerCase() === 'sumall'){
+          sumAndAddValuesToRange(
+            spreadsheetId,
+            activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[1].toUpperCase(),
+              (response_entities.cells.length==3?response_entities.cells[2].toUpperCase():null)
+          )
+        }else if(response_entities.commands[0].toLowerCase() === 'multiplyall'){
+          multiplyAndAddValuesToRange(spreadsheetId, activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[1].toUpperCase(), (response_entities.cells.length==3?response_entities.cells[2].toUpperCase():null));
+
+        }else if(response_entities.commands[0].toLowerCase() === 'averageall'){
+          calculateAverageAndAddToRange(spreadsheetId, activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[1].toUpperCase(),(response_entities.cells.length==3?response_entities.cells[2].toUpperCase():null));
+
         }
+
       });
 
 
@@ -200,6 +231,7 @@ const extractEntitiesFromText = async(text) => {
       const chart = data.chart;
 
       return { commands, cells, values, column, row, chart };
+      
 
     });
 
@@ -219,6 +251,211 @@ const extractEntitiesFromText = async(text) => {
     console.error('Fetch error:', error);
   }
 }
+// mathmatical operations
+
+async function sumAndAddValuesToRange(spreadsheetId, range,cell) {
+  try {
+    const token = await checkAuthentication(); // Assuming you have a function to check authentication
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values/${encodeURIComponent(range)}`;
+
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        Authorization:` Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to retrieve values from range: ${responseData.error.message}`);
+    }
+
+    const values = responseData.values;
+
+    // Calculate the sum of numeric values
+    const numericSum = values
+      .flat() // Flatten the 2D array
+      .filter(value => !isNaN(value)) // Filter out non-numeric values
+      .reduce((sum, value) => sum + Number(value), 0);
+
+    console.log(`Sum of numeric values in range ${range}: ${numericSum}`);
+    numericVal=numericSum;
+
+    if(cell){
+    updateCellValue(spreadsheetId, activeSheetName + '!' + cell.toUpperCase(), numericSum, 'USER_ENTERED')
+    }
+    
+
+    // await addValuesToRange(spreadsheetId, sumRange, sumValues);
+  } catch (error) {
+    console.error('Error summing and adding values to range:', error);
+  }
+}
+
+// Function to multiply and add numeric values to a range in a Google Sheet
+async function multiplyAndAddValuesToRange(spreadsheetId, range,cell) {
+  try {
+    const token = await checkAuthentication(); // Assuming you have a function to check authentication
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values/${encodeURIComponent(range)}`;
+
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to retrieve values from range: ${responseData.error.message}`);
+    }
+
+    const values = responseData.values;
+    console.log(values);
+
+    // Calculate the product of numeric values
+   const numericProduct = values
+      .flat() // Flatten the 2D array
+      .map(value => isNaN(Number(value)) ? 1 : Number(value)) // Convert to numbers and handle non-numeric values
+      .reduce((product, value) => product * value, 1);
+
+    console.log(`Product of numeric values in range ${range}: ${numericProduct}`);
+
+    // Now, you can add the product to a specific cell or range using the addValuesToRange function
+    const productRange = 'Sheet1!D1'; // Change this to the cell where you want to put the product
+    const productValues = [[numericProduct]];
+      if(cell){
+      
+    updateCellValue(spreadsheetId, activeSheetName + '!' + cell.toUpperCase(), numericProduct, 'USER_ENTERED')
+    }else{
+      numericVal=numericProduct
+    }
+
+
+
+  } catch (error) {
+    console.error('Error multiplying and adding values to range:', error);
+  }
+}
+
+
+// Function to calculate average and add to a range in a Google Sheet
+async function calculateAverageAndAddToRange(spreadsheetId, range,cell) {
+  try {
+    const token = await checkAuthentication(); // Assuming you have a function to check authentication
+
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values/${encodeURIComponent(range)}`;
+
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to retrieve values from range: ${responseData.error.message}`);
+    }
+
+    const values = responseData.values;
+
+    // Calculate the average of numeric values
+    const numericValues = values
+      .flat() // Flatten the 2D array
+      .filter(value => !isNaN(value)) // Filter out non-numeric values
+      .map(Number);
+
+    const sum = numericValues.reduce((acc, value) => acc + value, 0);
+    const average = sum / numericValues.length;
+
+    console.log(`Average of numeric values in range ${range}: ${average}`);
+
+    // Now, you can add the average to a specific cell or range using the addValuesToRange function
+    const averageRange = 'Sheet1!E1'; // Change this to the cell where you want to put the average
+    const averageValues = [[average]];
+       if(cell){
+      
+    updateCellValue(spreadsheetId, activeSheetName + '!' + cell.toUpperCase(), average, 'USER_ENTERED')
+    }else{
+      numericVal=average;
+    }
+
+
+  } catch (error) {
+    console.error('Error calculating average and adding to range:', error);
+  }
+}
+
+
+
+//table
+async function createEmptyTable(spreadsheetId, sheetName, startCell, numRows, numCols) {
+  try {
+    const token = await checkAuthentication(); // Assuming you have a function to check authentication
+
+    const apiUrl =` https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(spreadsheetId)}/values/${encodeURIComponent(sheetName)}:batchUpdate`;
+
+    // Convert the startCell to row and column indices
+    const startRowIndex = parseInt(startCell.match(/\d+/)[0]) - 1;
+    const startColumnIndex = startCell.match(/[A-Z]+/)[0].split('').reduce((acc, char) => acc * 26 + char.charCodeAt(0) - 'A'.charCodeAt(0) + 1, 0) - 1;
+
+    // Create the requests for batch update
+    const requests = [
+      {
+        updateCells: {
+          start: {
+            sheetId: 0, // Assuming the sheet has ID 0
+            rowIndex: startRowIndex,
+            columnIndex: startColumnIndex,
+          },
+          rows: Array.from({ length: numRows }, () => ({
+            values: Array.from({ length: numCols }, () => ({})), // Empty values
+          })),
+          fields: 'userEnteredValue', // Only update userEnteredValue field
+        },
+      },
+    ];
+
+    // Send the batch update request
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ requests }),
+    });
+
+    const responseData = await response.json();
+
+    if (!response.ok) {
+      throw new Error(`Failed to create table: ${responseData.error.message}`);
+    }
+
+    console.log(`Table created with ${numRows} rows and ${numCols} columns starting from ${startCell}`);
+  } catch (error) {
+    console.error('Error creating table:', error);
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 const getActiveSheetName = (tabId) => {
   return new Promise(async (resolve, reject) => {
@@ -283,13 +520,18 @@ const unauthenticateUser = () => {
 
 const updateCellValue = async (spreadsheetId, range, newValue, valueInputOption) => {
   try {
+    // while(!newValue || !numericVal);
+    await sleep(1000);
+    console.log("1st parameter:",newValue);
+    console.log("global paramet",numericVal);
     const token = await checkAuthentication();
     const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${encodeURIComponent(
       spreadsheetId,
     )}/values/${encodeURIComponent(range)}?valueInputOption=${encodeURIComponent(valueInputOption)}`;
     const requestBody = {
-      values: [[newValue]],
+      values: [[(newValue?newValue:numericVal)]],
     };
+    numericVal=null;
     const response = await fetch(apiUrl, {
       method: 'PUT',
       headers: {
@@ -733,6 +975,7 @@ const insert_chart = async (spreadsheetId, range, chart) => {
         },
         targetAxis: 'LEFT_AXIS',
       };
+      
       seriesRequests.push(seriesRequest);
     }
 
