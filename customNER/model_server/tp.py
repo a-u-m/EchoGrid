@@ -3,10 +3,10 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import spacy
 
-app = Flask(__name__)
+app = Flask(_name_)
 CORS(app)
 
-model_path = os.path.join(os.path.dirname(__file__), "../model/_best_Model")
+model_path = os.path.join(os.path.dirname(_file_), "../model/model-best")
 nlp_ner = spacy.load(model_path)
 
 def extract_entities(text):
@@ -14,7 +14,6 @@ def extract_entities(text):
     cells = []
     column = []
     row = []
-    chart = []
     type_labels = []
 
     doc = nlp_ner(text)
@@ -22,7 +21,7 @@ def extract_entities(text):
     for ent in doc.ents:
         if ent.label_ == "VALUE":
             values.append(ent.text)
-        elif ent.label_ in ("INSERT", "DELETE", "REPLACE", "MERGE", "BOLD", "ITALIC"):
+        elif ent.label_ in ("INSERT", "DELETE", "REPLACE", "MERGE", "BOLD", "ITALIC","COPY", "PASTE"):
             type_labels.append(ent.label_)
         elif ent.label_ == "CELL":
             cells.append(ent.text)
@@ -30,17 +29,13 @@ def extract_entities(text):
             column.append(ent.text)
         elif ent.label_ == "ROW":
             row.append(ent.text)
-        elif ent.label_ == "CHART":
-            type_labels.append(ent.label_)
-            chart.append(ent.text)
 
     return {
         'values': values,
         'type_labels': type_labels,
         'cells': cells,
         'column': column,
-        'row': row,
-        'chart': chart
+        'row': row
     }
 
 @app.route('/predict', methods=['POST'])
@@ -49,9 +44,10 @@ def predict():
         data = request.get_json()
         text = data['text']
         print(text)
-
+        
+        
         nlp = spacy.load("en_core_web_sm")
-
+        
         number_mapping = {
             'zero': '0',
             'one': '1',
@@ -70,11 +66,11 @@ def predict():
         pattern = re.compile(r'\b(' + '|'.join(number_mapping.keys()) + r')\b', re.IGNORECASE)
 
         # Replace text representations with numerical values
-        text = pattern.sub(lambda x: number_mapping[x.group().lower()], text)
+        input_text = pattern.sub(lambda x: number_mapping[x.group().lower()], input_text)
 
         #input_text.lower()
         # Tokenize and process the input text
-        doc = nlp(text)
+        doc = nlp(input_text)
 
         # Initialize a list to store sentences
         sentences = []
@@ -102,17 +98,13 @@ def predict():
             #print(f"Sentence {i}: {sentence}")
 
         print(sentences)
-
-
         json_list = []
         
         for sentence in sentences:
             json_list.append(extract_entities(sentence))
         
         print(json_list)
-        import json
-        # json_string = json.dumps(json_list, indent=2)
-        # print(json_string)
+                
         
         # extracted_entities = extract_entities(text)
         # print(extract_entities)
@@ -121,5 +113,5 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)})
 
-if __name__ == '__main__':
+if _name_ == '_main_':
     app.run(debug=True)

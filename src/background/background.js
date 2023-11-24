@@ -42,11 +42,11 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
   if (spreadsheetId && activeSheetName && currentTabId && sender.tab && sender.tab.id === currentTabId) {
     if (message.action === 'recognizedText') {
-      const recognizedText = message.text;
+      const recognizedText = message.text.toLowerCase();
 
-      const response_entities = await extractEntitiesFromText(recognizedText)
+      const response_entities_array = await extractEntitiesFromText(recognizedText)
       console.log('Recognized Text:', recognizedText);
-      console.log('model response:', response_entities);
+      console.log('model response:', response_entities_array);
       // const wordArray = recognizedText.split(' ');
       // if (wordArray[0].toLowerCase() === 'delete' && cellPattern.test(wordArray[1])) {
       //   clearParticularCell(spreadsheetId, activeSheetName + '!' + wordArray[1].toUpperCase());
@@ -59,112 +59,117 @@ chrome.runtime.onMessage.addListener(async(message, sender, sendResponse) => {
       //       val += ' ' + wordArray[i];
       //     }
       //   }
-      if (response_entities.commands[0].toLowerCase() === 'delete' && cellPattern.test(response_entities.cells[0])) {
-        updateCellValue(
-          spreadsheetId,
-          activeSheetName + '!' + response_entities.cells[0].toUpperCase(),
-          '',
-          'USER_ENTERED',
-        );
-      } else if (
-        response_entities.commands[0].toLowerCase() === 'insert' &&
-        cellPattern.test(response_entities.cells[0])
-      ) {
-        let val = response_entities.values[0];
-        console.log(val);
-        updateCellValue(
-          spreadsheetId,
-          activeSheetName + '!' + response_entities.cells[0].toUpperCase(),
-          val,
-          'USER_ENTERED',
-        );
-      } else if (response_entities.commands[0].toLowerCase() === 'delete') {
-        // if (response_entities.column.length != 0) {
-        //   deleteColumn(spreadsheetId, response_entities.column[0]);
-        // }
-        if (response_entities.row.length !== 0) {
-          deleteRow(spreadsheetId, response_entities.row[0]);
+
+      response_entities_array.forEach((response_entities) => {
+        if (response_entities.commands[0].toLowerCase() === 'delete' && cellPattern.test(response_entities.cells[0])) {
+          updateCellValue(
+            spreadsheetId,
+            activeSheetName + '!' + response_entities.cells[0].toUpperCase(),
+            '',
+            'USER_ENTERED',
+          );
+        } else if (
+          response_entities.commands[0].toLowerCase() === 'insert' &&
+          cellPattern.test(response_entities.cells[0])
+        ) {
+          let val = response_entities.values[0];
+          console.log(val);
+          updateCellValue(
+            spreadsheetId,
+            activeSheetName + '!' + response_entities.cells[0].toUpperCase(),
+            val,
+            'USER_ENTERED',
+          );
+        } else if (response_entities.commands[0].toLowerCase() === 'delete') {
+          const alphaVal = (s) => s.toLowerCase().charCodeAt(0) - 97 + 1;
+          if (response_entities.column.length != 0) {
+            deleteColumn(spreadsheetId, alphaVal(response_entities.column[0]));
+          }
+          if (response_entities.row.length !== 0) {
+            deleteRow(spreadsheetId, response_entities.row[0]);
+          }
+        } else if (response_entities.commands[0].toLowerCase() === 'replace') {
+          // let find = '';
+          // let replace = '';
+          // let i = 1;
+          // let isReplace = false;
+
+          // for (i; i < wordArray.length; i++) {
+          //   if (wordArray[i] == 'with') {
+          //     isReplace = true;
+          //     continue;
+          //   }
+
+          //   if (isReplace) {
+          //     if (replace === '') {
+          //       replace += wordArray[i];
+          //     } else {
+          //       replace += ' ' + wordArray[i];
+          //     }
+          //   } else {
+          //     if (find === '') {
+          //       find += wordArray[i];
+          //     } else {
+          //       find += ' ' + wordArray[i];
+          //     }
+          //   }
+          // }
+
+          let find = response_entities.values[0];
+          let replace = response_entities.values[1];
+          console.log('Find : ' + find + ' Replace : ' + replace);
+          find_replace(spreadsheetId, find, replace);
+
+          // find_replace(spreadsheetId, 'king', 'prathamesh');
+        } else if (
+          response_entities.commands[0].toLowerCase() === 'bold' &&
+          cellPattern.test(response_entities.cells[0])
+        ) {
+          bold_text(
+            spreadsheetId,
+            activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[0].toUpperCase(),
+          );
+        } else if (
+          response_entities.commands[0].toLowerCase() === 'italic' &&
+          cellPattern.test(response_entities.cells[0])
+        ) {
+          italic_text(
+            spreadsheetId,
+            activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[0].toUpperCase(),
+          );
+        } else if (response_entities.commands[0].toLowerCase() === 'merge') {
+          merge_cells(
+            spreadsheetId,
+            activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[1].toUpperCase(),
+          );
+        } else if (response_entities.commands[0].toLowerCase() === 'chart') {
+          insert_chart(
+            spreadsheetId,
+            activeSheetName +
+              '!' +
+              response_entities.cells[0].toUpperCase() +
+              ':' +
+              response_entities.cells[1].toUpperCase(),
+            response_entities.chart[0].toUpperCase(),
+          );
         }
-      } else if (response_entities.commands[0].toLowerCase() === 'replace') {
-        // let find = '';
-        // let replace = '';
-        // let i = 1;
-        // let isReplace = false;
-
-        // for (i; i < wordArray.length; i++) {
-        //   if (wordArray[i] == 'with') {
-        //     isReplace = true;
-        //     continue;
-        //   }
-
-        //   if (isReplace) {
-        //     if (replace === '') {
-        //       replace += wordArray[i];
-        //     } else {
-        //       replace += ' ' + wordArray[i];
-        //     }
-        //   } else {
-        //     if (find === '') {
-        //       find += wordArray[i];
-        //     } else {
-        //       find += ' ' + wordArray[i];
-        //     }
-        //   }
-        // }
-
-        let find = response_entities.values[0];
-        let replace = response_entities.values[1];
-        console.log('Find : ' + find + ' Replace : ' + replace);
-        find_replace(spreadsheetId, find, replace);
-
-        // find_replace(spreadsheetId, 'king', 'prathamesh');
-      } else if (
-        response_entities.commands[0].toLowerCase() === 'bold' &&
-        cellPattern.test(response_entities.cells[0])
-      ) {
-        bold_text(
-          spreadsheetId,
-          activeSheetName +
-            '!' +
-            response_entities.cells[0].toUpperCase() +
-            ':' +
-            response_entities.cells[0].toUpperCase(),
-        );
-      } else if (
-        response_entities.commands[0].toLowerCase() === 'italic' &&
-        cellPattern.test(response_entities.cells[0])
-      ) {
-        italic_text(
-          spreadsheetId,
-          activeSheetName +
-            '!' +
-            response_entities.cells[0].toUpperCase() +
-            ':' +
-            response_entities.cells[0].toUpperCase(),
-        );
-      } else if (response_entities.commands[0].toLowerCase() === 'merge') {
-        merge_cells(
-          spreadsheetId,
-          activeSheetName +
-            '!' +
-            response_entities.cells[0].toUpperCase() +
-            ':' +
-            response_entities.cells[1].toUpperCase(),
-        );
-      } else if (response_entities.commands[0].toLowerCase() === 'chart') {
-        insert_chart(
-          spreadsheetId,
-          activeSheetName +
-            '!' +
-            response_entities.cells[0].toUpperCase() +
-            ':' +
-            response_entities.cells[1].toUpperCase(),
-          response_entities.chart[0].toUpperCase(),
-        );
-      }
+      });
 
 
     }
+    
   }
 });
 
@@ -182,16 +187,34 @@ const extractEntitiesFromText = async(text) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const data = await response.json();
-    console.log(data)
-    const values = data.values;
-    const commands = data.type_labels;
-    const cells = data.cells;
-    const column = data.column;
-    const row = data.row;
-    const chart = data.chart;
+    const dataArray = await response.json();
+    console.log(dataArray);
 
-    return {commands : commands,cells:cells,values:values, column:column, row: row, chart: chart}
+    // Process each element in the array
+    const extractedDataArray = dataArray.map((data) => {
+      const values = data.values;
+      const commands = data.type_labels;
+      const cells = data.cells;
+      const column = data.column;
+      const row = data.row;
+      const chart = data.chart;
+
+      return { commands, cells, values, column, row, chart };
+
+    });
+
+    return extractedDataArray;
+
+    // const data = await response.json();
+    // console.log(data)
+    // const values = data.values;
+    // const commands = data.type_labels;
+    // const cells = data.cells;
+    // const column = data.column;
+    // const row = data.row;
+    // const chart = data.chart;
+
+    // return {commands : commands,cells:cells,values:values, column:column, row: row, chart: chart}
   } catch (error) {
     console.error('Fetch error:', error);
   }
