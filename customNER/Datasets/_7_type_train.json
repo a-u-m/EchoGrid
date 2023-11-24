@@ -1622,7 +1622,7 @@
       }
     ],
     [
-      "delete the content of A1.\r",
+      "delete the content of a1.\r",
       {
         "entities": [
           [
@@ -1639,7 +1639,7 @@
       }
     ],
     [
-      "clear cell B3.\r",
+      "clear cell b3.\r",
       {
         "entities": [
           [
@@ -1656,7 +1656,7 @@
       }
     ],
     [
-      "remove value from cell C4.\r",
+      "remove value from cell c4.\r",
       {
         "entities": [
           [
@@ -1673,7 +1673,7 @@
       }
     ],
     [
-      "erase the value from D5.\r",
+      "erase the value from d5.\r",
       {
         "entities": [
           [
@@ -1690,7 +1690,7 @@
       }
     ],
     [
-      "erase the value of D5.\r",
+      "erase the value of d5.\r",
       {
         "entities": [
           [
@@ -1707,7 +1707,7 @@
       }
     ],
     [
-      "delete Sales Report from cell A1.\r",
+      "delete sales report from cell a1.\r",
       {
         "entities": [
           [
@@ -1724,7 +1724,7 @@
       }
     ],
     [
-      "clear the input in E7.\r",
+      "clear the input in e7.\r",
       {
         "entities": [
           [
@@ -1741,7 +1741,7 @@
       }
     ],
     [
-      "clear the input in M7.\r",
+      "clear the input in m7.\r",
       {
         "entities": [
           [
@@ -1758,7 +1758,7 @@
       }
     ],
     [
-      "clear the input from A6.\r",
+      "clear the input from a6.\r",
       {
         "entities": [
           [
@@ -1775,7 +1775,7 @@
       }
     ],
     [
-      "remove Quarterly Budget from cell B2.\r",
+      "remove quarterly budget from cell b2.\r",
       {
         "entities": [
           [
@@ -1792,7 +1792,7 @@
       }
     ],
     [
-      "erase name from cell D6.\r",
+      "erase name from cell d6.\r",
       {
         "entities": [
           [
@@ -1809,7 +1809,7 @@
       }
     ],
     [
-      "delete the value in cell B7.\r",
+      "delete the value in cell b7.\r",
       {
         "entities": [
           [
@@ -1826,7 +1826,7 @@
       }
     ],
     [
-      "clear the data of G8.\r",
+      "clear the data of g8.\r",
       {
         "entities": [
           [
@@ -1843,7 +1843,7 @@
       }
     ],
     [
-      "clear the formula in B4.\r",
+      "clear the formula in b4.\r",
       {
         "entities": [
           [
@@ -1860,7 +1860,7 @@
       }
     ],
     [
-      "remove the text in cell C5.\r",
+      "remove the text in cell c5.\r",
       {
         "entities": [
           [
@@ -1877,7 +1877,7 @@
       }
     ],
     [
-      "erase the calculation from D6.\r",
+      "erase the calculation from d6.\r",
       {
         "entities": [
           [
@@ -1894,7 +1894,7 @@
       }
     ],
     [
-      "clear the value in cell E9.\r",
+      "clear the value in cell e9.\r",
       {
         "entities": [
           [
@@ -1911,7 +1911,7 @@
       }
     ],
     [
-      "remove the contents in cell F5.\r",
+      "remove the contents in cell f5.\r",
       {
         "entities": [
           [
@@ -1928,7 +1928,7 @@
       }
     ],
     [
-      "erase the values in G1.\r",
+      "erase the values in g1.\r",
       {
         "entities": [
           [
@@ -1945,7 +1945,7 @@
       }
     ],
     [
-      "replace Dhruv with Prathamesh.\r",
+      "replace dhruv with prathamesh.\r",
       {
         "entities": [
           [
@@ -2077,7 +2077,7 @@
       }
     ],
     [
-      "swap Wednesday with Monday.\r",
+      "swap wednesday with monday.\r",
       {
         "entities": [
           [
@@ -3737,7 +3737,7 @@
       }
     ],
     [
-      "remove column D.\r",
+      "remove column d.\r",
       {
         "entities": [
           [
@@ -3754,7 +3754,7 @@
       }
     ],
     [
-      "eliminate column A.\r",
+      "eliminate column a.\r",
       {
         "entities": [
           [
@@ -3771,7 +3771,7 @@
       }
     ],
     [
-      "erase column U.\r",
+      "erase column u.\r",
       {
         "entities": [
           [
@@ -3788,7 +3788,7 @@
       }
     ],
     [
-      "omit column M.\r",
+      "omit column m.\r",
       {
         "entities": [
           [
@@ -3805,7 +3805,7 @@
       }
     ],
     [
-      "get rid of the E column.\r",
+      "get rid of the e column.\r",
       {
         "entities": [
           [
@@ -3822,7 +3822,7 @@
       }
     ],
     [
-      "get rid of the E column.\r",
+      "get rid of the e column.\r",
       {
         "entities": [
           [
@@ -3839,7 +3839,7 @@
       }
     ],
     [
-      "exclude column M.\r",
+      "exclude column m.\r",
       {
         "entities": [
           [
@@ -3856,7 +3856,7 @@
       }
     ],
     [
-      "drop column R from the spreadsheet.\r",
+      "drop column r from the spreadsheet.\r",
       {
         "entities": [
           [
@@ -3873,7 +3873,7 @@
       }
     ],
     [
-      "drop column R from the spreadsheet.\r",
+      "drop column r from the spreadsheet.\r",
       {
         "entities": [
           [
@@ -3890,7 +3890,7 @@
       }
     ],
     [
-      "cut out column M.\r",
+      "cut out column m.\r",
       {
         "entities": [
           [
@@ -3907,7 +3907,7 @@
       }
     ],
     [
-      "strip away column Y.\r",
+      "strip away column y.\r",
       {
         "entities": [
           [
@@ -3924,7 +3924,7 @@
       }
     ],
     [
-      "strip away the column Y from the spreadsheet.\r",
+      "strip away the column y from the spreadsheet.\r",
       {
         "entities": [
           [
@@ -3941,7 +3941,7 @@
       }
     ],
     [
-      "exclude the column L from the table.\r",
+      "exclude the column l from the table.\r",
       {
         "entities": [
           [
@@ -3958,7 +3958,7 @@
       }
     ],
     [
-      "eradicate column Q.\r",
+      "eradicate column q.\r",
       {
         "entities": [
           [
@@ -3975,7 +3975,7 @@
       }
     ],
     [
-      "eradicate column Q.\r",
+      "eradicate column q.\r",
       {
         "entities": [
           [
@@ -3992,7 +3992,7 @@
       }
     ],
     [
-      "take out column C.\r",
+      "take out column c.\r",
       {
         "entities": [
           [
@@ -4009,7 +4009,7 @@
       }
     ],
     [
-      "scrub column Z from the record.\r",
+      "scrub column z from the record.\r",
       {
         "entities": [
           [
@@ -4026,7 +4026,7 @@
       }
     ],
     [
-      "leave out column G.\r",
+      "leave out column g.\r",
       {
         "entities": [
           [
@@ -4043,7 +4043,7 @@
       }
     ],
     [
-      "leave out column G.\r",
+      "leave out column g.\r",
       {
         "entities": [
           [
@@ -4060,7 +4060,7 @@
       }
     ],
     [
-      "purge column B.\r",
+      "purge column b.\r",
       {
         "entities": [
           [
@@ -4077,7 +4077,7 @@
       }
     ],
     [
-      "purge column B.\r",
+      "purge column b.\r",
       {
         "entities": [
           [
@@ -4094,7 +4094,7 @@
       }
     ],
     [
-      "wipe out column I.\r",
+      "wipe out column i.\r",
       {
         "entities": [
           [
@@ -4111,7 +4111,7 @@
       }
     ],
     [
-      "vanish column V from the spreadsheet.\r",
+      "vanish column v from the spreadsheet.\r",
       {
         "entities": [
           [
@@ -4128,7 +4128,7 @@
       }
     ],
     [
-      "vanish column V.\r",
+      "vanish column v.\r",
       {
         "entities": [
           [
@@ -4145,7 +4145,7 @@
       }
     ],
     [
-      "clear out column K.",
+      "clear out column k.",
       {
         "entities": [
           [
@@ -4349,7 +4349,7 @@
       }
     ],
     [
-      "Annihilate the content in row 65.\r",
+      "annihilate the content in row 65.\r",
       {
         "entities": [
           [
@@ -4383,7 +4383,7 @@
       }
     ],
     [
-      "Empty row 80 of any content.\r",
+      "empty row 80 of any content.\r",
       {
         "entities": [
           [
@@ -4451,7 +4451,7 @@
       }
     ],
     [
-      "Obliterate the records in row 102.\r",
+      "obliterate the records in row 102.\r",
       {
         "entities": [
           [
@@ -4502,7 +4502,7 @@
       }
     ],
     [
-      "combine the cells spanning from B3 to E4.\r",
+      "combine the cells spanning from b3 to e4.\r",
       {
         "entities": [
           [
@@ -4524,7 +4524,7 @@
       }
     ],
     [
-      "merge the range of cells F7 to I8.\r",
+      "merge the range of cells f7 to i8.\r",
       {
         "entities": [
           [
@@ -4546,7 +4546,7 @@
       }
     ],
     [
-      "Unify the content in cells A1 through C2.\r",
+      "Unify the content in cells a1 through c2.\r",
       {
         "entities": [
           [
@@ -4568,7 +4568,7 @@
       }
     ],
     [
-      "create a merged cell from G3 to J4.\r",
+      "create a merged cell from g3 to j4.\r",
       {
         "entities": [
           [
@@ -4590,7 +4590,7 @@
       }
     ],
     [
-      "join the cells in the range K5 to L6.\r",
+      "join the cells in the range k5 to l6.\r",
       {
         "entities": [
           [
@@ -4612,7 +4612,7 @@
       }
     ],
     [
-      "combine the contents of cells M9 through N10.\r",
+      "combine the contents of cells m9 through n10.\r",
       {
         "entities": [
           [
@@ -4634,7 +4634,7 @@
       }
     ],
     [
-      "merge the specified cell range, O11 to Q12.\r",
+      "merge the specified cell range, o11 to q12.\r",
       {
         "entities": [
           [
@@ -4656,7 +4656,7 @@
       }
     ],
     [
-      "unite the cells from S13 to V14.\r",
+      "unite the cells from s13 to v14.\r",
       {
         "entities": [
           [
@@ -4678,7 +4678,7 @@
       }
     ],
     [
-      "consolidate the cells in the range X15 Y16.\r",
+      "consolidate the cells in the range x15 y16.\r",
       {
         "entities": [
           [
@@ -4700,7 +4700,7 @@
       }
     ],
     [
-      "form a single cell by merging Z17 to A18.\r",
+      "form a single cell by merging z17 to a18.\r",
       {
         "entities": [
           [
@@ -4722,7 +4722,7 @@
       }
     ],
     [
-      "combine the cells spanning from C3 to F4.\r",
+      "combine the cells spanning from c3 to f4.\r",
       {
         "entities": [
           [
@@ -4744,7 +4744,7 @@
       }
     ],
     [
-      "merge the range of cells G7 to J8.\r",
+      "merge the range of cells g7 to j8.\r",
       {
         "entities": [
           [
@@ -4766,7 +4766,7 @@
       }
     ],
     [
-      "Unify the content in cells B1 through D2.\r",
+      "unify the content in cells b1 through d2.\r",
       {
         "entities": [
           [
@@ -4788,7 +4788,7 @@
       }
     ],
     [
-      "create a merged cell from E3 to H4.\r",
+      "create a merged cell from e3 to h4.\r",
       {
         "entities": [
           [
@@ -4810,7 +4810,7 @@
       }
     ],
     [
-      "join the cells in the range I5 to K6.\r",
+      "join the cells in the range i5 to k6.\r",
       {
         "entities": [
           [
@@ -4832,7 +4832,7 @@
       }
     ],
     [
-      "combine the contents of cells L9 through M10.\r",
+      "combine the contents of cells l9 through m10.\r",
       {
         "entities": [
           [
@@ -4854,7 +4854,7 @@
       }
     ],
     [
-      "merge the specified cell range, N11 to P12.\r",
+      "merge the specified cell range, n11 to p12.\r",
       {
         "entities": [
           [
@@ -4876,7 +4876,7 @@
       }
     ],
     [
-      "unite the cells from Q13 to T14.\r",
+      "unite the cells from q13 to t14.\r",
       {
         "entities": [
           [
@@ -4898,7 +4898,7 @@
       }
     ],
     [
-      "consolidate the cells in the range U15 to W16.\r",
+      "consolidate the cells in the range u15 to w16.\r",
       {
         "entities": [
           [
@@ -4920,7 +4920,7 @@
       }
     ],
     [
-      "form a single cell by merging X17 to Z18.",
+      "form a single cell by merging x17 to z18.",
       {
         "entities": [
           [
@@ -4942,7 +4942,7 @@
       }
     ],
     [
-      "merge the cells from B4 to C8 and then merge them again.\r",
+      "merge the cells from b4 to c8 and then merge them again.\r",
       {
         "entities": [
           [
@@ -4964,7 +4964,7 @@
       }
     ],
     [
-      "combine and merge the data in cells D3 to E7.\r",
+      "combine and merge the data in cells d3 to e7.\r",
       {
         "entities": [
           [
@@ -4986,7 +4986,7 @@
       }
     ],
     [
-      "join, unify, and then merge the values in cells F2 through G6.\r",
+      "merge the values in cells f2 through g6.\r",
       {
         "entities": [
           [
@@ -5008,7 +5008,7 @@
       }
     ],
     [
-      "merge and blend the content in cells H4 to I8.\r",
+      "blend the content in cells h4 to i8.\r",
       {
         "entities": [
           [
